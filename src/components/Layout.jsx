@@ -40,9 +40,31 @@ function Layout() {
   }, [navigation]);
 
   useEffect(() => {
-    const pageUrl = window.location.pathname.slice(1);
-    setNavigation(pageUrl);
-  }, []);
+    window.addEventListener("resize", () => {
+      const activeLink = navRef.current?.querySelector(
+        `[data-nav="${navigation}"]`
+      );
+      updateIndicator(activeLink);
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        const activeLink = navRef.current?.querySelector(
+          `[data-nav="${navigation}"]`
+        );
+        updateIndicator(activeLink);
+      });
+    };
+  }, [navigation]);
+
+  // useEffect(() => {
+  //   const pageUrl = window.location.pathname.slice(1);
+  //   if (pageUrl === "") {
+  //     setNavigation("home");
+  //   } else {
+  //     setNavigation(pageUrl);
+  //   }
+  // }, []);
 
   return (
     <>

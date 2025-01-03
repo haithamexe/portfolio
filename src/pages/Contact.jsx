@@ -1,5 +1,5 @@
 function Contect() {
-  return <div>Contect</div>;
+  return <div></div>;
 }
 
 export default Contect;
