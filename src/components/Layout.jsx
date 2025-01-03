@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import { Moon, Sun, Square } from "lucide-react";
+import { Moon, Sun, Square, Leaf } from "lucide-react";
 import { useThemeContext } from "../context/ThemeProvider";
 import { useState, useRef, useEffect } from "react";
 import "../styles/main.css";
@@ -9,6 +9,8 @@ function Layout() {
 
   const [navigation, setNavigation] = useState("home");
   const [indicatorStyle, setIndicatorStyle] = useState({});
+  const [linkeStyle, setLinkStyle] = useState({});
+  const navElementRef = useRef(null);
   const navRef = useRef(null);
 
   const updateIndicator = (e) => {
@@ -22,21 +24,34 @@ function Layout() {
     });
   };
 
+  const updateLinkStyle = () => {
+    setLinkStyle({
+      left: "10px",
+    });
+  };
+
   useEffect(() => {
     const activeLink = navRef.current?.querySelector(
       `[data-nav="${navigation}"]`
     );
     updateIndicator(activeLink);
+
+    updateLinkStyle();
   }, [navigation]);
+
+  useEffect(() => {
+    const pageUrl = window.location.pathname.slice(1);
+    setNavigation(pageUrl);
+  }, []);
 
   return (
     <>
       <div className="layder-wrapper">
         <div className="layout">
           <div className="side-header themed-element">
-            <div className="logo">
+            <div className="logo-header">
               <h1>Haitham Jalal</h1>
-              <p>Developer</p>
+              <p>Developer & Designer</p>
             </div>
             <div className="nav" ref={navRef}>
               <div className="nav-indicator" style={indicatorStyle}>
@@ -48,7 +63,25 @@ function Layout() {
                 />
               </div>
 
-              <Link
+              {[
+                { id: "home", path: "/" },
+                { id: "about", path: "/about" },
+                { id: "projects", path: "/projects" },
+                { id: "contact", path: "/contact" },
+                { id: "resume", path: "/resume" },
+              ].map(({ id, path }) => (
+                <Link
+                  key={id}
+                  onClick={() => setNavigation(id)}
+                  className={`nav-link ${navigation === id ? "active" : ""}`}
+                  to={path}
+                  data-nav={id}
+                >
+                  {id.charAt(0).toUpperCase() + id.slice(1)}
+                </Link>
+              ))}
+
+              {/* <Link
                 onClick={() => {
                   setNavigation("home");
                 }}
@@ -97,7 +130,7 @@ function Layout() {
                 to="/resume"
               >
                 Resume
-              </Link>
+              </Link> */}
             </div>
           </div>
           <Outlet />

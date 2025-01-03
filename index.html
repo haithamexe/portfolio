@@ -2,11 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <title>Haitham Jalal</title>
+    <style>
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #080808; /* Black background */
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        z-index: 9999;
+        opacity: 1; /* Fully visible */
+        transition: opacity 0.7s ease; /* Fade-out transition */
+      }
+      #loading-screen-text {
+        font-size: 2rem;
+        color: #fff;
+        transition: opacity 0.9s ease; /* Fade-out transition */
+      }
+    </style>
   </head>
   <body>
+    <div id="loading-screen">
+      <h1 id="loading-screen-text">Haitham Abdullah</h1>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

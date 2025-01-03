@@ -11,28 +11,25 @@ function ThemeProvider({ children }) {
     if (typeof window === "undefined") {
       return "dark";
     }
-    return localStorage.getItem("theme") ||
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return localStorage.getItem("theme");
   });
 
   const [effect, setEffect] = useState("on");
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handelChange = (e) => {
-      setTheme(e.matches ? "dark" : "light");
-    };
+  // useEffect(() => {
+  //   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  //   const handelChange = (e) => {
+  //     setTheme(e.matches ? "dark" : "light");
+  //   };
 
-    mediaQuery.addEventListener("change", handelChange);
-    setTheme(mediaQuery.matches ? "dark" : "light");
+  //   mediaQuery.addEventListener("change", handelChange);
+  //   setTheme(mediaQuery.matches ? "dark" : "light");
 
-    const localTheme = localStorage.getItem("theme");
-    if (localTheme) {
-      setTheme(localTheme);
-    }
-  }, []);
+  //   const localTheme = localStorage.getItem("theme");
+  //   if (localTheme) {
+  //     setTheme(localTheme);
+  //   }
+  // }, []);
 
   useEffect(() => {
     const root = window.document.documentElement;

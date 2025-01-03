@@ -29,7 +29,7 @@
   --text-primary-light: #111827;
   --text-secondary-light: #4b5563;
   --text-tertiary-light: #6b7280;
-  --accent-light: #303030;
+  --accent-light: #6e6e6e;
   --border-light: #000000;
 
   /* Dark theme */
@@ -39,7 +39,7 @@
   --text-primary-dark: #f9fafb;
   --text-secondary-dark: #d1d5db;
   --text-tertiary-dark: #9ca3af;
-  --accent-dark: #868686;
+  --accent-dark: #8d8d8d;
   --border-dark: #a3a3a3;
 }
 
@@ -76,6 +76,8 @@ body {
   place-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: var(--background);
+  color: var(--text-primary);
 }
 
 .theme-toggle {
