@@ -4,6 +4,8 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  width: 100svw;
+  height: 100svh;
   padding: 35px;
   overflow: hidden;
 }
@@ -208,6 +210,7 @@
   position: absolute;
   bottom: 0;
   margin-bottom: 0.8vh;
+  margin-bottom: 0.8svh;
   padding-left: 3px;
   font-weight: 900;
   /* left: 0; */
