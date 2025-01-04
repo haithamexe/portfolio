@@ -16,6 +16,8 @@ const Resume = lazy(() => import("./pages/Resume"));
 const NotFound404 = lazy(() => import("./pages/NotFound404"));
 const Layout = lazy(() => import("./components/Layout"));
 
+const isMobile = window.innerWidth < 900;
+
 function App() {
   useEffect(() => {
     const loadintext = document.getElementById("loading-screen-text");
