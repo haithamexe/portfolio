@@ -3,6 +3,7 @@ import { Moon, Sun, Square, Leaf } from "lucide-react";
 import { useThemeContext } from "../context/ThemeProvider";
 import { useState, useRef, useEffect } from "react";
 import "../styles/main.css";
+import Effect from "./Effect";
 
 function Layout() {
   const { theme, toggleTheme, effect, toggleEffect } = useThemeContext();
@@ -110,6 +111,7 @@ function Layout() {
               ))}
             </div>
           </div>
+          {effect === "on" && <Effect />}
           <Outlet />
         </div>
         <div className="side-toggles themed-element">
