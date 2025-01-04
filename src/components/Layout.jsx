@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import { Moon, Sun, Square, Leaf } from "lucide-react";
 import { useThemeContext } from "../context/ThemeProvider";
 import { useState, useRef, useEffect } from "react";
@@ -6,7 +6,7 @@ import "../styles/main.css";
 
 function Layout() {
   const { theme, toggleTheme, effect, toggleEffect } = useThemeContext();
-
+  const navigate = useNavigate();
   const [navigation, setNavigation] = useState("home");
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRef = useRef(null);
@@ -56,6 +56,22 @@ function Layout() {
     }
   }, []);
 
+  const handleNavigation = (e, path, id) => {
+    e.preventDefault();
+    const page = document.querySelector(".page-transition");
+    if (page) {
+      page.classList.add("fade-exit");
+      page.classList.remove("fade-enter");
+      setTimeout(() => {
+        setNavigation(id);
+      }, 100);
+
+      setTimeout(() => {
+        navigate(path);
+      }, 400);
+    }
+  };
+
   return (
     <>
       <div className="layder-wrapper">
@@ -84,7 +100,7 @@ function Layout() {
               ].map(({ id, path }) => (
                 <Link
                   key={id}
-                  onClick={() => setNavigation(id)}
+                  onClick={(e) => handleNavigation(e, path, id)}
                   className={`nav-link ${navigation === id ? "active" : ""}`}
                   to={path}
                   data-nav={id}
@@ -92,57 +108,6 @@ function Layout() {
                   {id.charAt(0).toUpperCase() + id.slice(1)}
                 </Link>
               ))}
-
-              {/* <Link
-                onClick={() => {
-                  setNavigation("home");
-                }}
-                className="nav-link"
-                to="/"
-                data-nav="home"
-              >
-                Home
-              </Link>
-              <Link
-                onClick={() => {
-                  setNavigation("about");
-                }}
-                className="nav-link"
-                to="/about"
-                data-nav="about"
-              >
-                About
-              </Link>
-              <Link
-                onClick={() => {
-                  setNavigation("projects");
-                }}
-                className="nav-link"
-                to="/projects"
-                data-nav="projects"
-              >
-                Projects
-              </Link>
-              <Link
-                onClick={() => {
-                  setNavigation("contact");
-                }}
-                data-nav="contact"
-                className="nav-link"
-                to="/contact"
-              >
-                Contact
-              </Link>
-              <Link
-                onClick={() => {
-                  setNavigation("resume");
-                }}
-                data-nav="resume"
-                className="nav-link"
-                to="/resume"
-              >
-                Resume
-              </Link> */}
             </div>
           </div>
           <Outlet />

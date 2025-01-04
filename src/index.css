@@ -117,3 +117,16 @@ button:focus-visible {
 .themed-element {
   transition: background-color 0.9s, color 0.9s, border-color 0.9s;
 }
+
+.fade-container {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-container.fade-out {
+  opacity: 0;
+}
+
+.fade-container.fade-in {
+  opacity: 1;
+}
