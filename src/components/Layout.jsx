@@ -9,8 +9,6 @@ function Layout() {
 
   const [navigation, setNavigation] = useState("home");
   const [indicatorStyle, setIndicatorStyle] = useState({});
-  const [linkeStyle, setLinkStyle] = useState({});
-  const navElementRef = useRef(null);
   const navRef = useRef(null);
 
   const updateIndicator = (e) => {
@@ -24,19 +22,11 @@ function Layout() {
     });
   };
 
-  const updateLinkStyle = () => {
-    setLinkStyle({
-      left: "10px",
-    });
-  };
-
   useEffect(() => {
     const activeLink = navRef.current?.querySelector(
       `[data-nav="${navigation}"]`
     );
     updateIndicator(activeLink);
-
-    updateLinkStyle();
   }, [navigation]);
 
   useEffect(() => {
@@ -57,14 +47,14 @@ function Layout() {
     };
   }, [navigation]);
 
-  // useEffect(() => {
-  //   const pageUrl = window.location.pathname.slice(1);
-  //   if (pageUrl === "") {
-  //     setNavigation("home");
-  //   } else {
-  //     setNavigation(pageUrl);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const pageUrl = window.location.pathname.slice(1);
+    if (pageUrl === "") {
+      setNavigation("home");
+    } else {
+      setNavigation(pageUrl);
+    }
+  }, []);
 
   return (
     <>

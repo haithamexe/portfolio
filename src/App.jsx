@@ -32,7 +32,7 @@ function App() {
     setTimeout(() => {
       preloader.style.pointerEvents = "none";
       preloader.style.display = "none";
-    }, 2000);
+    }, 1400);
   }, []);
 
   return (
