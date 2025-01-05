@@ -97,15 +97,15 @@ export class Item {
 
     // On mouseleave, stop the animation loop and
     // fade out the deco element
-    this.DOM.el.addEventListener("mouseleave", () => {
-      this.stopRendering();
+    // this.DOM.el.addEventListener("mouseleave", () => {
+    //   this.stopRendering();
 
-      gsap.to(this.DOM.deco, {
-        duration: 0.5,
-        ease: "power3",
-        opacity: 0,
-      });
-    });
+    //   gsap.to(this.DOM.deco, {
+    //     duration: 0.5,
+    //     ease: "power3",
+    //     opacity: 0,
+    //   });
+    // });
   }
 
   // Request a new animation frame to start or

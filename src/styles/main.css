@@ -45,7 +45,7 @@
   justify-content: center;
   gap: 0rem;
   margin-bottom: 20px;
-
+  color: var(--text-primary);
   @media screen and (max-width: 900px) {
     margin-bottom: 10px;
   }
@@ -53,15 +53,20 @@
 
 .side-header h1 {
   font-size: 4rem;
-  block-size: auto;
-  height: 4rem;
+  height: 3.4rem;
   margin-bottom: 0.6rem;
   font-weight: 100;
+  margin-top: 10px;
+  margin-left: 3px;
+
+  font-family: var(--font-logo);
 
   @media screen and (max-width: 900px) {
     font-size: 1.8rem;
-    height: 2rem;
+    height: 1.8rem;
     margin-bottom: 1px;
+    margin-top: 5px;
+    margin-left: 1.2px;
   }
   /* height: 4rem; */
 }
