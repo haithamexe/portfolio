@@ -5,7 +5,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 10px;
+  padding: 1rem;
+
+  @media screen and (max-width: 900px) {
+    padding: 0 0.5rem;
+  }
 }
 
 .about-card {
@@ -13,7 +17,7 @@
   max-width: 400px;
 
   @media screen and (max-width: 900px) {
-    max-width: 130px;
+    max-width: 145px;
   }
 }
 
@@ -33,7 +37,7 @@
     /* height: 100px; */
     margin-left: 15px;
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 3px;
   }
 }
 
@@ -51,7 +55,7 @@
 
   @media screen and (max-width: 900px) {
     font-size: 0.61rem;
-    line-height: 1rem;
+    line-height: 0.75rem;
   }
 }
 

@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "KINO40";
+  font-family: "Dirtyline";
   src: url("../public/fonts/dirtyline/Dirtyline\ 36daysoftype\ 2022.ttf")
     format("truetype");
 }
@@ -32,11 +32,11 @@
   background-color: var(--background);
   color: var(--text-primary);
 
-  --font-general: "Ubuntu", sans-serif;
+  --font-general: "Ubuntu";
 
-  --font-pixel: "neopixel", sans-serif;
+  --font-pixel: "neopixel";
 
-  --font-logo: "KINO40", sans-serif;
+  --font-logo: "Dirtyline";
 
   /* Light theme */
   --background-light: #e9e9e9;
