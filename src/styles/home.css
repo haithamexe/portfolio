@@ -1,6 +1,8 @@
 .home {
   height: 100%;
   width: 100%;
+  position: relative;
+  /* display: flex; */
 }
 
 .home-text-wrapper {
@@ -12,10 +14,9 @@
   margin-bottom: 1.3rem;
   margin-right: 2rem;
   text-align: left;
-  z-index: 10;
   padding: 10px;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 750px) {
     margin-bottom: 1rem;
     margin-right: 1rem;
     width: 75px;
@@ -30,7 +31,7 @@
   word-break: break-all;
   hyphens: auto;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 750px) {
     font-size: 0.57rem;
   }
 }

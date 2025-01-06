@@ -59,6 +59,7 @@ function Layout() {
 
   const handleNavigation = (e, path, id) => {
     e.preventDefault();
+    if (navigation === id) return;
     const page = document.querySelector(".page-transition");
     if (page) {
       page.classList.add("fade-exit");
@@ -98,6 +99,7 @@ function Layout() {
                 { id: "projects", path: "/projects" },
                 { id: "contact", path: "/contact" },
                 { id: "resume", path: "/resume" },
+                { id: "blog", path: "/blog" },
               ].map(({ id, path }) => (
                 <Link
                   key={id}
@@ -111,7 +113,7 @@ function Layout() {
               ))}
             </div>
           </div>
-          {effect === "on" && <Effect />}
+          {/* <Effect effect={effect} /> */}
           <Outlet />
         </div>
         <div className="side-toggles themed-element">
@@ -143,7 +145,7 @@ function Layout() {
                 background: effect === "off" && "none",
               }}
             />
-            <p>Effect</p>
+            <p className="side-toggle-p">Effect</p>
           </div>
         </div>
 

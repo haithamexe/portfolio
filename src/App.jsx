@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import NotFound404 from "./pages/NotFound404";
 import Layout from "./components/Layout";
+import Blog from "./pages/Blog";
 
 function App() {
   useEffect(() => {
@@ -86,6 +87,14 @@ function App() {
           element={
             <PageTransition>
               <Resume />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/blog"
+          element={
+            <PageTransition>
+              <Blog />
             </PageTransition>
           }
         />

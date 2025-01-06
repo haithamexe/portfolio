@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-/* @font-face {
-  font-family: "KINO40";
-  src: url("../public/fonts/other/Protest\ Demo\ Regular.ttf")
-    format("truetype");
-} */
-
 @font-face {
   font-family: "neopixel";
   src: url("../public/fonts/neopixel-font-1735989537-0/neopixel-regular.otf")
@@ -88,16 +82,8 @@
 a {
   text-decoration: none;
 }
-a:hover {
-  color: var(--accent);
-}
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  /* width: 100vw; */
-  /* height: 100vh; */
   background-color: var(--background);
   color: var(--text-primary);
 }
@@ -117,30 +103,11 @@ body {
   color: var(--background);
 }
 
-button {
-  background-color: var(--surface);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--accent);
-  color: var(--background);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 .themed-element {
   transition: background-color 0.9s, color 0.9s, border-color 0.9s;
 }
 
-.fade-container {
+/* .fade-container {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
@@ -151,4 +118,4 @@ button:focus-visible {
 
 .fade-container.fade-in {
   opacity: 1;
-}
+} */
