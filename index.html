@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="preload"
-      href="./src/assets/fonts/dirtyline/Dirtyline\ 36daysoftype\ 2022.ttf"
+      href="/fonts/Dirtyline-36daysoftype.ttf"
       as="font"
       type="font/ttf"
       crossorigin
@@ -15,27 +15,27 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./src/assets/images/haitham-fav-h-2.png"
+      href="/images/haitham-fav-h-2.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./src/assets/images/haitham-fav-h-2.png"
+      href="/images/haitham-fav-h-2.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="./src/assets/images/haitham-fav-h-2.png"
+      href="/images/haitham-fav-h-2.png"
     />
     <title>Haitham Jalal</title>
     <style>
       @font-face {
         font-family: "Dirtyline";
-        src: url("./src/assets/fonts/dirtyline/Dirtyline\ 36daysoftype\ 2022.ttf")
-          format("truetype");
-        font-display: block;
+        src: url("fonts/Dirtyline-36daysoftype.ttf") format("truetype"),
+          url("/fonts/Dirtyline-36daysoftype.woff") format("woff"),
+          url("/fonts/Dirtyline-36daysoftype.woff2") format("woff2");
       }
 
       body {
@@ -45,7 +45,7 @@
       }
 
       #loading-screen {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -57,13 +57,11 @@
         z-index: 9999;
         opacity: 1; /* Fully visible */
         transition: opacity 0.7s ease; /* Fade-out transition */
-        will-change: opacity;
       }
       #loading-screen-text {
         font-size: 50px;
         color: #fff;
         font-family: "Dirtyline";
-        will-change: opacity;
         transition: opacity 0.7s ease; /* Fade-out transition */
         @media screen and (max-width: 600px) {
           font-size: 30px;

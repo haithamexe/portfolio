@@ -1,6 +1,6 @@
 import { useThemeContext } from "../context/ThemeProvider";
-import photoDarkSm from "../assets/images/photo-dark-sm.jpg";
-import photoLightSm from "../assets/images/photo-light-sm.jpg";
+import photoDarkSm from "/images/photo-dark-sm.jpg";
+import photoLightSm from "/images/photo-light-sm.jpg";
 import "../styles/about.css";
 
 function About() {
