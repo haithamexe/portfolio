@@ -28,6 +28,7 @@
   /* margin: 10px; */
   margin-left: 20px;
   margin-bottom: 5px;
+  border-radius: 10px;
 
   background-color: var(--text-primary);
   padding: 15px;
@@ -46,7 +47,7 @@
   /* columns: ; */
 
   color: var(--text-secondary);
-  font-weight: 200;
+  font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.6rem;
   text-align: justify;
@@ -60,6 +61,39 @@
 }
 
 .about-text span {
+  font-weight: 900 !important;
+  color: var(--text-primary);
+}
+
+.rotating-button {
+  width: 70px;
+  height: 90px;
+}
+
+.section {
+}
+.section-buttons h1 {
+  font-size: 1.6rem;
   font-weight: 900;
   color: var(--text-primary);
+  flex-grow: 1;
+  width: 100%;
+  text-align: left;
+  /* border: 1px solid var(--border); */
+}
+
+.section-buttons {
+  display: flex;
+  justify-content: safe;
+  align-items: center;
+  /* gap: 0 1rem; */
+
+  flex-wrap: wrap;
+  /* border: 1px solid var(--border); */
+  padding: 1rem;
+  width: 400px;
+  background-color: var(--accent-2);
+
+  border-radius: 10px;
+  /* gap: 1rem; */
 }

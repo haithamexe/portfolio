@@ -16,6 +16,7 @@
 
 .layout {
   border: 1px solid var(--border);
+  border-radius: 10px;
   background-color: var(--surface);
   color: var(--text-primary);
   padding: 1rem;
@@ -208,6 +209,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.side-toggle-p {
+  margin-bottom: 2px;
 }
 
 .theme-toggle-button {

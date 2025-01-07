@@ -4,7 +4,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding-right: 7px;
+  padding-right: 1.2rem;
+  padding-bottom: 1rem;
   /* display: flex; */
 }
 
