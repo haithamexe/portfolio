@@ -36,19 +36,16 @@ function Scene({
       onPointerOut={() => setHover(false)}
     >
       <meshBasicMaterial color={hover ? hoverColor : baseColor} />
-      <Decal
-        rotation={[0, Math.PI * 2, 0]} // Adjusted for new depth
-        position={[-0.08, 0, 3]} // Adjusted for new depth
-        scale={[0.2, 0.2, 10]} // Adjusted for new depth
+
+      <mesh
+        position={[-0.09, 0, 0.11]} // Adjusted for new depth
       >
-        <meshBasicMaterial
-          map={texture}
-          polygonOffset
-          polygonOffsetFactor={-1}
-        />
-      </Decal>
+        <planeGeometry args={[0.23, 0.23]} />
+        <meshStandardMaterial map={texture} transparent />
+      </mesh>
+
       <Text
-        position={[0.03, 0, 0.2]} // Adjusted for new depth
+        position={[0.03, 0, 0.14]} // Adjusted for new depth
         fontSize={0.11}
         color={textColor}
         anchorX="center"
@@ -77,7 +74,7 @@ const RotatingButton = ({
         }}
         style={{ background: "transparent" }}
       >
-        <ambientLight intensity={0.2} />
+        <ambientLight intensity={2} />
         <pointLight position={[10, 10, 10]} />
         <Scene
           baseColor={baseColor}
