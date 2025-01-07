@@ -66,8 +66,11 @@
 }
 
 .rotating-button {
-  width: 70px;
-  height: 90px;
+  width: 90px;
+  height: 75px;
+  position: relative;
+  /* background-color: var(--accent); */
+  /* border-radius: 50%; */
 }
 
 .section {
