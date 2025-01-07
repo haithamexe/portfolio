@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Text, RoundedBox, Decal, useTexture } from "@react-three/drei";
 import { useState, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import photoDark from "../../public/images/photo-dark-sm.jpg";
 
 function Scene({
   baseColor = "#3182ce",
@@ -13,7 +12,7 @@ function Scene({
   textColor = "#ffffff",
   imageUrl,
 }) {
-  const texture = useTexture("../../public/images/photo-dark-sm.jpg");
+  const texture = useTexture("/images/photo-dark-sm.jpg");
   const [hover, setHover] = useState(false);
   const meshRef = useRef();
 
