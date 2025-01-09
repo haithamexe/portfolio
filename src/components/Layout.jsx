@@ -66,11 +66,11 @@ function Layout() {
       page.classList.remove("fade-enter");
       setTimeout(() => {
         setNavigation(id);
-      }, 100);
+      }, 700);
 
       setTimeout(() => {
         navigate(path);
-      }, 400);
+      }, 700);
     }
   };
 
