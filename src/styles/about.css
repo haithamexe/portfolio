@@ -178,14 +178,19 @@
 .section-header {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 900px) {
+    justify-content: center;
+  }
 }
+
 .section-header h1 {
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 700;
 
   @media screen and (max-width: 900px) {
-    font-size: 0.5rem;
+    font-size: 0.45rem;
+    padding: 5px;
   }
 }
 
