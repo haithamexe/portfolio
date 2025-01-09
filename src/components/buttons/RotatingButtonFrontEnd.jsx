@@ -1,6 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { RoundedBox, Text, useTexture, Decal } from "@react-three/drei";
+import {
+  RoundedBox,
+  Text,
+  useTexture,
+  useProgress,
+  Html,
+} from "@react-three/drei";
 import chroma from "chroma-js";
 import { useThemeContext } from "../../context/ThemeProvider";
 import { frontendButtons } from "../../utils/buttonsArrays";
@@ -73,6 +79,12 @@ function RotatingButton({
   );
 }
 
+function Loader() {
+  const { progress } = useProgress();
+  console.log(progress);
+  return <Html center>{progress.toFixed(0)}% loaded</Html>; // Display loading progress
+}
+
 // AboutButtons Component
 export default function RotatingButtonFrontEnd() {
   const { theme } = useThemeContext();
@@ -92,16 +104,18 @@ export default function RotatingButtonFrontEnd() {
       camera={{ position: [0, 0, 11], fov: 5 }}
       gl={{ antialias: true, powerPreference: "high-performance" }}
     >
-      {buttons.map((button, i) => (
-        <RotatingButton
-          key={i}
-          position={button.position}
-          frontText={button.frontText}
-          imageUrl={button.imageUrl}
-          theme={theme}
-          setButtonFunction={setButtonFunction}
-        />
-      ))}
+      <Suspense fallback={<Loader />}>
+        {buttons.map((button, i) => (
+          <RotatingButton
+            key={i}
+            position={button.position}
+            frontText={button.frontText}
+            imageUrl={button.imageUrl}
+            theme={theme}
+            setButtonFunction={setButtonFunction}
+          />
+        ))}
+      </Suspense>
     </Canvas>
   );
 }
