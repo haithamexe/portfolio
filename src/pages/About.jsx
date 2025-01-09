@@ -3,6 +3,7 @@ import photoDarkSm from "/images/photo-dark-sm.jpg";
 import photoLightSm from "/images/photo-light-sm.jpg";
 import "../styles/about.css";
 import AboutButtons from "../components/AboutButtons";
+import { ButtonProvider } from "../context/ButtonProvider";
 
 function About() {
   const { theme } = useThemeContext();
@@ -25,7 +26,11 @@ function About() {
           applications that seamlessly blend functionality and aesthetics.
         </p>
       </div>
-      <AboutButtons />
+      <div className="about-buttons-sections">
+        <ButtonProvider>
+          <AboutButtons />
+        </ButtonProvider>
+      </div>
     </div>
   );
 }

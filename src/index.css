@@ -128,3 +128,25 @@ body {
 .fade-container.fade-in {
   opacity: 1;
 } */
+
+::-webkit-scrollbar {
+  width: 0.6em;
+  height: 0.6em;
+}
+::-webkit-scrollbar-track {
+  background: rgb(22, 21, 27);
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(108, 125, 192);
+  border-radius: 100vw;
+  border: 0.12em solid var(--bg-secondary);
+}
+
+@supports (not selector(::-webkit-scrollbar)) {
+  * {
+    /* scrollbar-color: rgb(108, 125, 192) rgb(22, 21, 27); */
+    scrollbar-width: thin;
+  }
+}
