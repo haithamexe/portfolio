@@ -7,10 +7,16 @@ export const useButtonContext = () => {
 };
 
 export const ButtonProvider = ({ children }) => {
-  const [buttonPath, setButton] = useState("");
+  const [buttonPath, setButton] = useState([]);
 
   const setButtonFunction = (buttonImagePath) => {
-    setButton(buttonImagePath);
+    if (buttonPath.includes(buttonImagePath)) {
+      return;
+    }
+    if (buttonPath.length > 11) {
+      setButton([...buttonPath.slice(0, 10), buttonImagePath]);
+    }
+    setButton((prev) => [buttonImagePath, ...prev]);
   };
 
   const clearButton = () => {
