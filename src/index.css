@@ -49,6 +49,8 @@
   --background-light: #e9e9e9;
   --surface-light: #d8d8d8;
   --surface-light-2: #bfc2c7;
+  --surface-light-3: #dbdbdb;
+  --surface-light-4: #cccccc;
   --text-primary-light: #111827;
   --text-secondary-light: #4b5563;
   --text-tertiary-light: #6b7280;
@@ -59,6 +61,8 @@
   --background-dark: #080808;
   --surface-dark: #0b0b0c;
   --surface-dark-2: #212224;
+  --surface-dark-3: #272727;
+  --surface-dark-4: #131313;
   --text-primary-dark: #f9fafb;
   --text-secondary-dark: #d1d5db;
   --text-tertiary-dark: #9ca3af;
@@ -75,6 +79,8 @@
   --accent: var(--accent-light);
   --border: var(--border-light);
   --accent-2: var(--surface-light-2);
+  --accent-3: var(--surface-light-3);
+  --accent-4: var(--surface-light-4);
 }
 
 [data-theme="dark"] {
@@ -86,6 +92,8 @@
   --accent: var(--accent-dark);
   --border: var(--border-dark);
   --accent-2: var(--surface-dark-2);
+  --accent-3: var(--surface-dark-3);
+  --accent-4: var(--surface-dark-4);
 }
 
 a {

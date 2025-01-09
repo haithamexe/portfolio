@@ -7,34 +7,35 @@ import { useButtonContext } from "../context/ButtonProvider";
 import StaticButtonsBackEnd from "./buttons/StaticButtonsBackEnd";
 import StaticButtonsFrontEnd from "./buttons/StaticButtonsFrontEnd";
 import StaticButtonsMisc from "./buttons/StaticButtonsMisc";
+import RotatingButton from "./buttons/RotaingButton";
 
 export default function AboutButtons() {
   const { buttonPath } = useButtonContext();
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    if (window.innerWidth <= 900) {
-      setIsMobile(true);
-    }
+  // useEffect(() => {
+  //   if (window.innerWidth <= 900) {
+  //     setIsMobile(true);
+  //   }
 
-    window.addEventListener("resize", () => {
-      if (window.innerWidth <= 900) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
+  //   window.addEventListener("resize", () => {
+  //     if (window.innerWidth <= 900) {
+  //       setIsMobile(true);
+  //     } else {
+  //       setIsMobile(false);
+  //     }
+  //   });
 
-    return () => {
-      window.removeEventListener("resize", () => {
-        if (window.innerWidth <= 900) {
-          setIsMobile(true);
-        } else {
-          setIsMobile(false);
-        }
-      });
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("resize", () => {
+  //       if (window.innerWidth <= 900) {
+  //         setIsMobile(true);
+  //       } else {
+  //         setIsMobile(false);
+  //       }
+  //     });
+  //   };
+  // }, []);
 
   return (
     <>
@@ -43,23 +44,31 @@ export default function AboutButtons() {
           <h1>Frontend Technologies:</h1>
           <MousePointerClick className="mouse-pointer" />
         </div>
-        {isMobile ? <StaticButtonsFrontEnd /> : <RotatingButtonFrontEnd />}
+        <StaticButtonsFrontEnd />
       </div>
       <div className="section-buttons-back themed-element">
         <div className="section-header themed-element">
           <h1>Backend Technologies:</h1>
           <MousePointerClick className="mouse-pointer" />
         </div>
-        {isMobile ? <StaticButtonsBackEnd /> : <RotatingButtonBackEnd />}
+        <StaticButtonsBackEnd />
       </div>
       <div className="section-buttons-used themed-element">
         <div className="section-header themed-element">
           <h1>Used Before:</h1>
           <MousePointerClick className="mouse-pointer" />
         </div>
-        {isMobile ? <StaticButtonsMisc /> : <RotatingButtonMisc />}
+        <StaticButtonsMisc />
       </div>
-      {!isMobile && (
+      {buttonPath.length > 0 && (
+        <div className="about-button-effect">
+          <RotatingButton
+            buttonPath={buttonPath}
+            frontText={buttonPath.toString()?.split("/")[3].split(".")[0]}
+          />
+        </div>
+      )}
+      {/* {!isMobile && (
         <div className="about-button-img">
           {buttonPath?.length > 0 &&
             buttonPath.map((path, i) => (
@@ -71,7 +80,7 @@ export default function AboutButtons() {
               />
             ))}
         </div>
-      )}
+      )} */}
     </>
   );
 }

@@ -1,11 +1,20 @@
 import React from "react";
 import { miscButtons } from "../../utils/buttonsArrays";
+import { useButtonContext } from "../../context/ButtonProvider";
 
 function StaticButtonsMisc() {
+  const { setButtonFunction } = useButtonContext();
   return (
-    <div className="static-buttons">
+    <div className="static-buttons themed-element">
       {miscButtons.map((button, index) => (
-        <div className="about-static-button" key={index}>
+        <div
+          onClick={() => {
+            setButtonFunction(button.imageUrl);
+          }}
+          style={{ cursor: "pointer" }}
+          className="about-static-button themed-element"
+          key={index}
+        >
           <img src={button?.imageUrl} alt={button?.frontText} />
           <p>{button?.frontText}</p>
         </div>
