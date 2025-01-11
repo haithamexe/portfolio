@@ -1,114 +1,113 @@
-// import React, { useRef } from "react";
-// import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import "../styles/contact.css";
 
-// const Contect = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     message: "",
-//   });
+const Contect = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-//   const [isSent, setIsSent] = useState(false);
-//   const [error, setError] = useState(null);
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState(null);
 
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prev) => ({
-//       ...prev,
-//       [name]: value,
-//     }));
-//   };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-//   const handleSubmit = (e) => {
-//     // const sendEmail = (e) => {
-//     //   e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setError("Please fill in all fields.");
+      setIsSent(false);
+      return;
+    }
 
-//     //   emailjs
-//     //     .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
-//     //       publicKey: "YOUR_PUBLIC_KEY",
-//     //     })
-//     //     .then(
-//     //       () => {
-//     //         console.log("SUCCESS!");
-//     //       },
-//     //       (error) => {
-//     //         console.log("FAILED...", error.text);
-//     //       }
-//     //     );
-//     // };
+    emailjs
+      .send(
+        import.meta.env.VITE_SERVICE_ID, // Replace with your EmailJS Service ID
+        import.meta.env.VITE_TEMPLATE_ID, // Replace with your EmailJS Template ID
+        formData,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY, // Replace with your EmailJS Public Key
+        }
+        //     } // Replace with your EmailJS User ID
+      )
+      .then(
+        (response) => {
+          console.log("Email successfully sent!", response);
+          setIsSent(true);
+          setError(null);
+          setFormData({ name: "", email: "", message: "" });
 
-//     e.preventDefault();
-//     emailjs
-//       .send(
-//         "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-//         "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
-//         formData,
-//         "YOUR_USER_ID" // Replace with your EmailJS User ID
-//       )
-//       .then(
-//         (response) => {
-//           console.log("Email successfully sent!", response);
-//           setIsSent(true);
-//           setError(null);
-//           setFormData({ name: "", email: "", message: "" });
-//         },
-//         (error) => {
-//           console.error("Failed to send email", error);
-//           setError("Failed to send email. Please try again.");
-//         }
-//       );
-//   };
+          setTimeout(() => {
+            setIsSent(false);
+          }, 2000);
+        },
+        (error) => {
+          console.error("Failed to send email", error);
+          setError("Failed to send email. Please try again.");
+          setIsSent(false);
 
-//   return (
-//     <div>
-//       <h1>Contact Us</h1>
-//       {isSent && <p>Email sent successfully!</p>}
-//       {error && <p style={{ color: "red" }}>{error}</p>}
-//       <form onSubmit={handleSubmit}>
-//         <label>
-//           Name:
-//           <input
-//             type="text"
-//             name="name"
-//             value={formData.name}
-//             onChange={handleChange}
-//             required
-//           />
-//         </label>
-//         <br />
-//         <label>
-//           Email:
-//           <input
-//             type="email"
-//             name="email"
-//             value={formData.email}
-//             onChange={handleChange}
-//             required
-//           />
-//         </label>
-//         <br />
-//         <label>
-//           Message:
-//           <textarea
-//             name="message"
-//             value={formData.message}
-//             onChange={handleChange}
-//             required
-//           />
-//         </label>
-//         <br />
-//         <button type="submit">Send</button>
-//       </form>
-//     </div>
-//   );
-// };
+          setTimeout(() => {
+            setError(null);
+          }, 2000);
+        }
+      );
+  };
 
-// export default Contect;
+  return (
+    <div className="contact themed-element">
+      <div className="contact-container themed-element">
+        <h1>Contact Me</h1>
+        <form onSubmit={handleSubmit}>
+          <label>Name:</label>
+          <input
+            className=" themed-element"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <label>Email:</label>
+          <input
+            className=" themed-element"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <label>Message:</label>
+          <textarea
+            className=" themed-element"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            resize="none"
+            style={{
+              resize: "none",
+            }}
+            rows={3}
+          />
+          <div className="form-footer themed-element">
+            {isSent && <p>Email sent successfully!</p>}
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            <button type="submit">
+              <p>Send</p>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
-import React from "react";
-
-function Contact() {
-  return <div>Contact</div>;
-}
-
-export default Contact;
+export default Contect;

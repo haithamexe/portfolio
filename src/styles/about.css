@@ -291,8 +291,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 140px;
   max-width: 400px;
+
+  @media screen and (max-height: 900px) {
+    height: 80px;
+  }
 
   @media screen and (max-width: 900px) {
     display: none;

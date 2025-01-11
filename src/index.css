@@ -53,9 +53,12 @@
   --surface-light-4: #cccccc;
   --text-primary-light: #111827;
   --text-secondary-light: #4b5563;
-  --text-tertiary-light: #6b7280;
+  --text-tertiary-light: #a1a1a1;
   --accent-light: #6e6e6e;
   --border-light: #000000;
+  --overlay-light-right: rgba(138, 138, 138, 0.8);
+  --overlay-light-left: rgba(255, 255, 255, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.14);
 
   /* Dark theme */
   --background-dark: #080808;
@@ -63,11 +66,15 @@
   --surface-dark-2: #212224;
   --surface-dark-3: #272727;
   --surface-dark-4: #131313;
+  --surface-dark-5: #353535;
   --text-primary-dark: #f9fafb;
   --text-secondary-dark: #d1d5db;
-  --text-tertiary-dark: #9ca3af;
+  --text-tertiary-dark: #8d8d8d;
   --accent-dark: #8d8d8d;
   --border-dark: #a3a3a3;
+  --overlay-dark-right: rgba(0, 0, 0, 0.8);
+  --overlay-dark-left: rgba(255, 255, 255, 0.1);
+  --shadow-dark: rgba(155, 155, 155, 0.1);
 }
 
 [data-theme="light"] {
@@ -81,6 +88,10 @@
   --accent-2: var(--surface-light-2);
   --accent-3: var(--surface-light-3);
   --accent-4: var(--surface-light-4);
+  --bar: #f5f5f5;
+  --overlay-right: var(--overlay-light-right);
+  --overlay-left: var(--overlay-light-left);
+  --shadow: var(--shadow-light);
 }
 
 [data-theme="dark"] {
@@ -94,6 +105,10 @@
   --accent-2: var(--surface-dark-2);
   --accent-3: var(--surface-dark-3);
   --accent-4: var(--surface-dark-4);
+  --bar: #585858;
+  --overlay-right: var(--overlay-dark-right);
+  --overlay-left: var(--overlay-dark-left);
+  --shadow: var(--shadow-dark);
 }
 
 a {
@@ -138,23 +153,23 @@ body {
 } */
 
 ::-webkit-scrollbar {
-  width: 0.6em;
-  height: 0.6em;
+  width: 0.5rem;
+  height: 0.3rem;
 }
 ::-webkit-scrollbar-track {
-  background: rgb(22, 21, 27);
+  background: var(--accent-2);
   border-radius: 100vw;
-  margin-block: 0.5em;
+  margin-block: 1em;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(108, 125, 192);
+  background: var(--bar);
   border-radius: 100vw;
-  border: 0.12em solid var(--bg-secondary);
+  border: 0.12em solid var(--bar);
 }
 
 @supports (not selector(::-webkit-scrollbar)) {
   * {
-    /* scrollbar-color: rgb(108, 125, 192) rgb(22, 21, 27); */
+    scrollbar-color: var(--bar) var(--accent-2);
     scrollbar-width: thin;
   }
 }

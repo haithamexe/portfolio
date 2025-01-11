@@ -15,7 +15,7 @@ function StaticButtonsMisc() {
           className="about-static-button themed-element"
           key={index}
         >
-          <img src={button?.imageUrl} alt={button?.frontText} />
+          <img src={button?.imageUrl} alt={button?.frontText} loading="eager" />
           <p>{button?.frontText}</p>
         </div>
       ))}

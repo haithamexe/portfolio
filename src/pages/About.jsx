@@ -14,6 +14,7 @@ function About() {
           src={theme === "dark" ? photoDarkSm : photoLightSm}
           className="about-image themed-element"
           alt="A portrait of the author"
+          loading="eager"
         />
         <p className="about-text themed-element">
           For the past decade, I honed my skills as a

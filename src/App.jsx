@@ -1,4 +1,10 @@
-import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useNavigate,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import React, { useEffect, lazy, Suspense, useState } from "react";
 import PageTransition from "./components/PageTransition";
 // const Home = lazy(() => import("./pages/Home"));
@@ -14,7 +20,6 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
-import NotFound404 from "./pages/NotFound404";
 import Layout from "./components/Layout";
 import Blog from "./pages/Blog";
 
@@ -91,14 +96,13 @@ function App() {
           }
         />
         <Route
-          path="/blog"
+          path="*"
           element={
             <PageTransition>
-              <Blog />
+              <Navigate to={"/"} replace />
             </PageTransition>
           }
         />
-        <Route path="*" element={<NotFound404 />} />
       </Route>
     </Routes>
     // </Suspense>

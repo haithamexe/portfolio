@@ -99,7 +99,6 @@ function Layout() {
                 { id: "projects", path: "/projects" },
                 { id: "contact", path: "/contact" },
                 { id: "resume", path: "/resume" },
-                { id: "blog", path: "/blog" },
               ].map(({ id, path }) => (
                 <Link
                   key={id}

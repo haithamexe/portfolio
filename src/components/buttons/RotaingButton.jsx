@@ -15,7 +15,7 @@ function RotatingButtonObject({ frontText, theme, imageUrl }) {
   const texture = useTexture(imageUrl);
   const [hover, setHover] = useState(false);
   const meshRef = useRef();
-  const baseColor = theme === "dark" ? "#272727" : "#BCBBBB";
+  const baseColor = theme === "dark" ? "#353535" : "#BCBBBB";
   // const randomPosition = () => {
   //   return [
   //     Math.random() * 1 - 2 * 0.2,
@@ -47,7 +47,13 @@ function RotatingButtonObject({ frontText, theme, imageUrl }) {
       onPointerOut={() => setHover(false)}
     >
       <meshBasicMaterial
-        color={hover ? chroma(baseColor).darken(0.65).hex() : baseColor}
+        color={
+          hover
+            ? chroma(baseColor)
+                .darken(theme === "dark" ? 0.4 : 0.9)
+                .hex()
+            : baseColor
+        }
         transparent
       />
 
