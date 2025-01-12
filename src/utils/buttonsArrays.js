@@ -35,16 +35,8 @@ export const frontendButtons = [
 
 export const backendButtons = [
   {
-    frontText: "C#",
-    imageUrl: "/images/backend/Csharp.png",
-  },
-  {
-    frontText: "C",
-    imageUrl: "/images/backend/C.png",
-  },
-  {
-    frontText: "EJS",
-    imageUrl: "/images/backend/EJS.png",
+    frontText: "Socket.IO",
+    imageUrl: "/images/frontend/Socket.IO.png",
   },
   {
     frontText: "Express.js",
@@ -85,6 +77,18 @@ export const backendButtons = [
 ];
 
 export const miscButtons = [
+  {
+    frontText: "EJS",
+    imageUrl: "/images/backend/EJS.png",
+  },
+  {
+    frontText: "C#",
+    imageUrl: "/images/backend/Csharp.png",
+  },
+  {
+    frontText: "C",
+    imageUrl: "/images/backend/C.png",
+  },
   {
     frontText: ".NET",
     imageUrl: "/images/used/NET.png",

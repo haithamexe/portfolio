@@ -57,7 +57,7 @@
   --accent-light: #6e6e6e;
   --border-light: #000000;
   --overlay-light-right: rgba(138, 138, 138, 0.8);
-  --overlay-light-left: rgba(255, 255, 255, 0.1);
+  --overlay-light-left: rgba(255, 255, 255, 0.3);
   --shadow-light: rgba(0, 0, 0, 0.14);
 
   /* Dark theme */
@@ -92,6 +92,7 @@
   --overlay-right: var(--overlay-light-right);
   --overlay-left: var(--overlay-light-left);
   --shadow: var(--shadow-light);
+  --popup: #ececec;
 }
 
 [data-theme="dark"] {
@@ -109,6 +110,7 @@
   --overlay-right: var(--overlay-dark-right);
   --overlay-left: var(--overlay-dark-left);
   --shadow: var(--shadow-dark);
+  --popup: #1a1a1a;
 }
 
 a {

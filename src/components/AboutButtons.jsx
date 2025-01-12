@@ -61,7 +61,7 @@ export default function AboutButtons() {
         <StaticButtonsMisc />
       </div>
       {buttonPath.length > 0 && (
-        <div className="about-button-effect">
+        <div className="about-button-effect themed-element">
           <RotatingButton
             buttonPath={buttonPath}
             frontText={buttonPath.toString()?.split("/")[3].split(".")[0]}
