@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ProjectsPreview from "../components/ProjectsPreview";
 import { createPortal } from "react-dom";
 import Portal from "../components/Portal";
+import { projects } from "../utils/projects";
 
 function Projects() {
   const [transform, setTransform] = useState({});
@@ -69,51 +70,6 @@ function Projects() {
     };
   }, []);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Project 1",
-      description: "Description 1",
-      image: "https://placeholder.pics/svg/150",
-      link: "github.com/ajhsd/asd",
-    },
-    {
-      id: 2,
-      title: "Project 2",
-      description: "Description 2",
-      image: "https://placeholder.pics/svg/700",
-      link: "github.com/ajhsd/asd",
-    },
-    {
-      id: 3,
-      title: "Project 3",
-      description: "Description 3",
-      image: "https://placeholder.pics/svg/1920x1080",
-      link: "github.com/ajhsd/asd",
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      description: "Description 4",
-      image: "https://placeholder.pics/svg/1920x1080",
-      link: "github.com/ajhsd/asd",
-    },
-    {
-      id: 5,
-      title: "Project 5",
-      description: "Description 4",
-      image: "https://placeholder.pics/svg/1920x1080",
-      link: "github.com/ajhsd/asd",
-    },
-    {
-      id: 6,
-      title: "Project 6",
-      description: "Description 4",
-      image: "https://placeholder.pics/svg/1920x1080",
-      link: "github.com/ajhsd/asd",
-    },
-  ];
-
   return (
     <Portal>
       <div className="projects">
@@ -150,7 +106,13 @@ function Projects() {
 
                 <div className="project-info">
                   <h2>{project.title}</h2>
-                  <p>{project.description}</p>
+                  <p>
+                    {project.title.length < 30
+                      ? project.description.length > 135
+                        ? project.description.slice(0, 125) + "..."
+                        : project.description
+                      : project.description.slice(0, 70) + "..."}
+                  </p>
                 </div>
               </div>
               <div className="project-footer">
