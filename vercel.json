@@ -1,14 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "installCommand": "git lfs install && git lfs pull && npm install",
-        "buildCommand": "npm run build"
-      }
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
