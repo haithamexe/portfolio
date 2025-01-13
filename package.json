@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postinstall": "git lfs install && git lfs pull"
+    "postinstall": "npx git-lfs install && npx git-lfs pull"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
