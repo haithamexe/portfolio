@@ -60,7 +60,7 @@ export const projects = [
     title: "Generative Art Codes",
     description:
       "A collection of generative art codes made with p5.js, javaScript and html canvas.",
-    image: "./images/generative-code.jpg",
+    image: "/images/generative-code.jpg",
     links: [
       { github: "https://github.com/haithamexe/Generative-Art-Collection-1.0" },
     ],
