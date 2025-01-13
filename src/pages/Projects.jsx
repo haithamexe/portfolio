@@ -102,7 +102,7 @@ function Projects() {
               onClick={() => setProjectClicked(project.id)}
             >
               <div className="project-body">
-                <img src={project.image} alt={project.title} loading="lazy" />
+                <img src={project.image} alt={project.title} loading="eager" />
 
                 <div className="project-info">
                   <h2>{project.title}</h2>

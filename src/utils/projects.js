@@ -4,7 +4,7 @@ export const projects = [
     title: "Slyder",
     description:
       "Full stack social media website, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
-    image: "https://placeholder.pics/svg/1920x1080",
+    image: "/gifs/slyder-gif.gif",
     links: [
       { github: "https://github.com/haithamexe/Slyder-Backend" },
       { github: "https://github.com/haithamexe/Slyder-Frontend" },
@@ -60,7 +60,7 @@ export const projects = [
     title: "Generative Art Codes",
     description:
       "A collection of generative art codes made with p5.js, javaScript and html canvas.",
-    image: "https://placeholder.pics/svg/1920x1080",
+    image: "./images/generative-code.jpg",
     links: [
       { github: "https://github.com/haithamexe/Generative-Art-Collection-1.0" },
     ],
