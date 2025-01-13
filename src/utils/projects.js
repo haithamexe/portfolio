@@ -6,15 +6,18 @@ export const projects = [
       "Full stack social media website, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
     image: "/gifs/slyder-gif.gif",
     links: [
-      { github: "https://github.com/haithamexe/Slyder-Backend" },
-      { github: "https://github.com/haithamexe/Slyder-Frontend" },
+      {
+        type: "Frontend Github",
+        url: "https://github.com/haithamexe/Slyder-Frontend",
+      },
+      {
+        type: "Backend Github",
+        url: "https://github.com/haithamexe/Slyder-Backend",
+      },
     ],
     demo: "https://slyder-omega.vercel.app/",
-    demoInfo: {
-      email: "demo@mail.com",
-      password: "demo1234",
-      note: "demo account will reset on logout and inactivity",
-    },
+    demoInfo:
+      "Email: demo@mail.com, Password: demo1234, *demo account resets on logout and inactivity*",
 
     features: [
       "Self authentication",
@@ -62,36 +65,68 @@ export const projects = [
       "A collection of generative art codes made with p5.js, javaScript and html canvas.",
     image: "/images/generative-code.jpg",
     links: [
-      { github: "https://github.com/haithamexe/Generative-Art-Collection-1.0" },
+      {
+        type: "Github",
+        url: "https://github.com/haithamexe/Generative-Art-Collection-1.0",
+      },
     ],
+    features: [
+      "Generative Art",
+      "p5.js",
+      "HTML Canvas",
+      "Javascript",
+      "Creative Coding",
+      "Customizable with sliders",
+    ],
+    stack: {
+      frontend: ["p5.js", "HTML Canvas", "Javascript", "Canvas-sketch"],
+    },
   },
   {
     id: 3,
     title: "Spotify Recommendation Algorithem",
     description:
       "A recommendation algorithem for Spotify data base made with python and scikit-learn using k-means and clustring to find similarties in clusters and then using a decision tree to finish recommending similar songs .",
-    image: "https://placeholder.pics/svg/1920x1080",
-    link: "https://github.com/haithamexe/Ann-Spotify-rec",
+    image: "./images/spotify-recommendation.jpg",
+    links: [
+      {
+        type: "Github",
+        url: "https://github.com/haithamexe/Ann-Spotify-rec",
+      },
+    ],
+
+    features: [
+      "Recommendation Algorithem",
+      "Python",
+      "Scikit-learn",
+      "K-means",
+      "Clustring",
+      "Decision Tree",
+      "Spotify API",
+    ],
+
+    stack: {
+      backend: ["Python", "Scikit-learn", "numpy", "pandas"],
+    },
   },
   {
     id: 4,
-    title: "Project 6",
-    description: "Description 4",
-    image: "https://placeholder.pics/svg/1920x1080",
-    link: "github.com/ajhsd/asd",
+    title: "Graphic Designs",
+    description:
+      "A collection of graphic designs made with Adobe Photoshop for different clients.",
+    image: "/images/graphic-designs.jpg",
   },
   {
     id: 5,
-    title: "Project 5",
-    description: "Description 4",
-    image: "https://placeholder.pics/svg/1920x1080",
-    link: "github.com/ajhsd/asd",
-  },
-  {
-    id: 6,
-    title: "Project 6",
-    description: "Description 4",
-    image: "https://placeholder.pics/svg/1920x1080",
-    link: "github.com/ajhsd/asd",
+    title: "Illustrations",
+    description:
+      "a collection of digital art illustrations made with Clip Studio Paint and Photoshop.",
+    image: "/images/illustrations.jpg",
+    links: [
+      {
+        type: "Art Archive",
+        url: "https://sites.google.com/view/haithamexist/home",
+      },
+    ],
   },
 ];
