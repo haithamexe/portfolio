@@ -11,7 +11,7 @@ function StaticButtonsFrontEnd() {
       {frontendButtons.map((button, index) => (
         <div
           onClick={() => {
-            setButtonFunction(button.imageUrl);
+            setButtonFunction(button.image);
           }}
           className="about-static-button themed-element"
           key={index}

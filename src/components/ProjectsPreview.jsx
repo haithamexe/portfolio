@@ -1,13 +1,7 @@
-import { useEffect, useState } from "react";
 import { CircleX, SquareArrowOutUpRight } from "lucide-react";
 import { useMediaContext } from "../context/MediaProvider";
 
-function ProjectsPreview({
-  projectId,
-  projectClicked,
-  project,
-  setProjectClicked,
-}) {
+function ProjectsPreview({ project, setProjectClicked }) {
   const { media } = useMediaContext();
 
   return (

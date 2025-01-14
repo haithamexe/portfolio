@@ -35,7 +35,7 @@ export default function AboutButtons() {
         <div className="about-button-effect themed-element">
           <RotatingButton
             buttonPath={buttonPath}
-            frontText={buttonPath.toString()?.split("/")[3].split(".")[0]}
+            frontText={buttonPath.toString()?.split("/")[2].split(".")[0]}
           />
         </div>
       )}

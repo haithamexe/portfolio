@@ -11,7 +11,7 @@ function StaticButtonsMisc() {
       {miscButtons.map((button, index) => (
         <div
           onClick={() => {
-            setButtonFunction(button.imageUrl);
+            setButtonFunction(button.image);
           }}
           style={{ cursor: "pointer" }}
           className="about-static-button themed-element"
