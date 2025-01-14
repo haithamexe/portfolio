@@ -20,7 +20,7 @@
     justify-content: flex-start;
     align-items: center;
     padding-top: 10rem;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 }
 
@@ -121,7 +121,7 @@
 
   @media screen and (max-width: 900px) {
     padding: 0.2rem;
-    height: 83px;
+    height: 84px;
   }
   /* gap: 1rem; */
 }
@@ -143,7 +143,7 @@
 
   @media screen and (max-width: 900px) {
     padding: 0.2rem;
-    height: 105px;
+    height: 107px;
   }
 }
 
@@ -164,7 +164,7 @@
 
   @media screen and (max-width: 900px) {
     padding: 0.2rem;
-    height: 105px;
+    height: 107px;
   }
   /* gap: 1rem; */
 }
@@ -188,9 +188,11 @@
   }
 }
 
-.section-header .mouse-pointer {
+.mouse-pointer {
   @media screen and (max-width: 900px) {
-    display: none;
+    /* display: none; */
+    width: 8px;
+    /* display: none; */
   }
   /* height: 20px; */
 }
