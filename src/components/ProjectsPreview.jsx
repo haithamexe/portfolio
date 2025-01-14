@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { CircleX, SquareArrowOutUpRight } from "lucide-react";
+import { useMediaContext } from "../context/MediaProvider";
 
 function ProjectsPreview({
   projectId,
@@ -7,6 +8,8 @@ function ProjectsPreview({
   project,
   setProjectClicked,
 }) {
+  const { media } = useMediaContext();
+
   return (
     <div className="project-preview-wrapper themed-element">
       <div className="project-preview ">
@@ -16,14 +19,18 @@ function ProjectsPreview({
         />
         {project?.video ? (
           <video
-            src={project?.video}
+            src={media[project?.video]?.src || project?.video}
             alt={project?.title}
             loop
             muted
             autoPlay
           ></video>
         ) : (
-          <img src={project?.image} alt={project?.title} loading="eager" />
+          <img
+            src={media[project?.image]?.src || project?.image}
+            alt={project?.title}
+            loading="eager"
+          />
         )}
         <div className="project-preview-header themed-element">
           <h2 className="project-preview-title themed-element">

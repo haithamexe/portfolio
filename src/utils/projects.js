@@ -63,7 +63,7 @@ export const projects = [
     title: "Generative Art Codes",
     description:
       "A collection of generative art codes made with p5.js, javaScript and html canvas.",
-    image: "/images/generative-code.jpg",
+    image: "/images/generative-code.webp",
     links: [
       {
         type: "Github",
@@ -87,7 +87,7 @@ export const projects = [
     title: "Spotify Recommendation Algorithem",
     description:
       "A recommendation algorithem for Spotify data base made with python and scikit-learn using k-means and clustring to find similarties in clusters and then using a decision tree to finish recommending similar songs .",
-    image: "./images/spotify-recommendation.jpg",
+    image: "/images/spotify-recommendation.webp",
     links: [
       {
         type: "Github",
@@ -114,14 +114,14 @@ export const projects = [
     title: "Graphic Designs",
     description:
       "A collection of graphic designs made with Adobe Photoshop for different clients.",
-    image: "/images/graphic-designs.jpg",
+    image: "/images/graphic-designs.webp",
   },
   {
     id: 5,
     title: "Illustrations",
     description:
       "a collection of digital art illustrations made with Clip Studio Paint and Photoshop.",
-    image: "/images/illustrations.jpg",
+    image: "/images/illustrations.webp",
     links: [
       {
         type: "Art Archive",

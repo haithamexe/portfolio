@@ -1,132 +1,150 @@
 export const frontendButtons = [
   {
     frontText: "React",
-    imageUrl: "/images/frontend/React.js.png",
+    image: "/images/React.js.webp",
   },
   {
     frontText: "JavaScript",
-    imageUrl: "/images/frontend/JavaScript.png",
+    image: "/images/JavaScript.webp",
   },
   {
     frontText: "CSS",
-    imageUrl: "/images/frontend/CSS.png",
+    image: "/images/CSS.webp",
   },
   {
     frontText: "HTML",
-    imageUrl: "/images/frontend/Html.png",
+    image: "/images/Html.webp",
   },
   {
     frontText: "MUI",
-    imageUrl: "/images/frontend/MUI.png",
+    image: "/images/MUI.webp",
   },
   {
     frontText: "Redux",
-    imageUrl: "/images/frontend/Redux.png",
+    image: "/images/Redux.webp",
   },
   {
     frontText: "Three.js",
-    imageUrl: "/images/frontend/Three.js.png",
+    image: "/images/Three.js.webp",
   },
   {
     frontText: "Socket.IO",
-    imageUrl: "/images/frontend/Socket.IO.png",
+    image: "/images/Socket.IO.webp",
   },
 ];
 
 export const backendButtons = [
   {
     frontText: "Socket.IO",
-    imageUrl: "/images/frontend/Socket.IO.png",
+    image: "/images/Socket.IO.webp",
   },
   {
     frontText: "Express.js",
-    imageUrl: "/images/backend/Express.js.png",
+    image: "/images/Express.js.webp",
   },
   {
     frontText: "JavaScript",
-    imageUrl: "/images/backend/JavaScript.png",
+    image: "/images/JavaScript.webp",
   },
   {
     frontText: "JWT",
-    imageUrl: "/images/backend/JWT.png",
+    image: "/images/JWT.webp",
   },
   {
     frontText: "MongoDB",
-    imageUrl: "/images/backend/MongoDB.png",
+    image: "/images/MongoDB.webp",
   },
   {
     frontText: "Node.js",
-    imageUrl: "/images/backend/Node.js.png",
+    image: "/images/Node.js.webp",
   },
   {
     frontText: "Postman",
-    imageUrl: "/images/backend/Postman.png",
+    image: "/images/Postman.webp",
   },
   {
     frontText: "Redis",
-    imageUrl: "/images/backend/Redis.png",
+    image: "/images/Redis.webp",
   },
   {
     frontText: "RestApi",
-    imageUrl: "/images/backend/RestApi.png",
+    image: "/images/RestApi.webp",
   },
   {
     frontText: "Restfull",
-    imageUrl: "/images/backend/Restfull.png",
+    image: "/images/Restfull.webp",
   },
 ];
 
 export const miscButtons = [
   {
     frontText: "EJS",
-    imageUrl: "/images/used/EJS.png",
+    image: "/images/EJS.webp",
   },
   {
     frontText: "C#",
-    imageUrl: "/images/used/Csharp.png",
+    image: "/images/Csharp.webp",
   },
   {
     frontText: "C",
-    imageUrl: "/images/used/C.png",
+    image: "/images/C.webp",
   },
   {
     frontText: ".NET",
-    imageUrl: "/images/used/NET.png",
+    image: "/images/NET.webp",
   },
   {
     frontText: "0Auth",
-    imageUrl: "/images/used/0Auth.png",
+    image: "/images/0Auth.webp",
   },
   {
     frontText: "Booostrap",
-    imageUrl: "/images/used/Bootstrap.png",
+    image: "/images/Bootstrap.webp",
   },
   {
     frontText: "Flask",
-    imageUrl: "/images/used/Flask.png",
+    image: "/images/Flask.webp",
   },
   {
     frontText: "Java",
-    imageUrl: "/images/used/Java.png",
+    image: "/images/Java.webp",
   },
   {
     frontText: "jQuery",
-    imageUrl: "/images/used/jQuery.png",
+    image: "/images/jQuery.webp",
   },
   {
     frontText: "Php",
-    imageUrl: "/images/used/Php.png",
+    image: "/images/Php.webp",
   },
   {
     frontText: "Python",
-    imageUrl: "/images/used/Python.png",
+    image: "/images/Python.webp",
   },
   {
     frontText: "SQL",
-    imageUrl: "/images/used/SQL.png",
+    image: "/images/SQL.webp",
   },
   {
     frontText: "Tailwind",
-    imageUrl: "/images/used/Tailwind.png",
+    image: "/images/Tailwind.webp",
   },
+];
+
+const extraImages = [
+  {
+    frontText: "protrait-dark",
+    image: "/images/photo-dark-sm.webp",
+  },
+  {
+    frontText: "protrait-white",
+    image: "/images/photo-light-sm.webp",
+  },
+];
+
+export const buttonsArrays = [
+  ...frontendButtons,
+  ...backendButtons,
+  ...miscButtons,
+  ...extraImages,
 ];

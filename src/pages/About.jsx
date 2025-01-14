@@ -1,12 +1,16 @@
 import { useThemeContext } from "../context/ThemeProvider";
-import photoDarkSm from "/images/photo-dark-sm.jpg";
-import photoLightSm from "/images/photo-light-sm.jpg";
 import "../styles/about.css";
 import AboutButtons from "../components/AboutButtons";
 import { ButtonProvider } from "../context/ButtonProvider";
+import { useMediaContext } from "../context/MediaProvider";
 
 function About() {
   const { theme } = useThemeContext();
+  const { media } = useMediaContext();
+
+  const photoLightSm = media["/images/photo-light-sm.webp"]?.src;
+  const photoDarkSm = media["/images/photo-dark-sm.webp"]?.src;
+
   return (
     <div className="about">
       <div className="about-card ">
@@ -28,9 +32,7 @@ function About() {
         </p>
       </div>
       <div className="about-buttons-sections">
-        <ButtonProvider>
-          <AboutButtons />
-        </ButtonProvider>
+        <ButtonProvider>{<AboutButtons />}</ButtonProvider>
       </div>
     </div>
   );
