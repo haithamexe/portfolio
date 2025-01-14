@@ -11,31 +11,31 @@ import RotatingButton from "./buttons/RotaingButton";
 
 export default function AboutButtons() {
   const { buttonPath } = useButtonContext();
-  // const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // useEffect(() => {
-  //   if (window.innerWidth <= 900) {
-  //     setIsMobile(true);
-  //   }
+  useEffect(() => {
+    if (window.innerWidth <= 900) {
+      setIsMobile(true);
+    }
 
-  //   window.addEventListener("resize", () => {
-  //     if (window.innerWidth <= 900) {
-  //       setIsMobile(true);
-  //     } else {
-  //       setIsMobile(false);
-  //     }
-  //   });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 900) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    });
 
-  //   return () => {
-  //     window.removeEventListener("resize", () => {
-  //       if (window.innerWidth <= 900) {
-  //         setIsMobile(true);
-  //       } else {
-  //         setIsMobile(false);
-  //       }
-  //     });
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener("resize", () => {
+        if (window.innerWidth <= 900) {
+          setIsMobile(true);
+        } else {
+          setIsMobile(false);
+        }
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -60,7 +60,7 @@ export default function AboutButtons() {
         </div>
         <StaticButtonsMisc />
       </div>
-      {buttonPath.length > 0 && (
+      {buttonPath.length > 0 && !isMobile && (
         <div className="about-button-effect themed-element">
           <RotatingButton
             buttonPath={buttonPath}
@@ -68,19 +68,6 @@ export default function AboutButtons() {
           />
         </div>
       )}
-      {/* {!isMobile && (
-        <div className="about-button-img">
-          {buttonPath?.length > 0 &&
-            buttonPath.map((path, i) => (
-              <img
-                key={i}
-                src={path}
-                alt="Button"
-                className="button-themed-element"
-              />
-            ))}
-        </div>
-      )} */}
     </>
   );
 }

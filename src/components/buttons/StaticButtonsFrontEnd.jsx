@@ -15,7 +15,7 @@ function StaticButtonsFrontEnd() {
           key={index}
           style={{ cursor: "pointer" }}
         >
-          <img src={button?.imageUrl} alt={button?.frontText} loading="eager" />
+          <img src={button?.imageUrl} alt={button?.frontText} loading="lazy" />
           <p>{button?.frontText}</p>
         </div>
       ))}

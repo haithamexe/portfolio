@@ -137,35 +137,35 @@ export const projects = [
     image: "https://placehold.co/1920x1080",
   },
   {
-    id: 6,
+    id: 7,
     title: "Web Development",
     description:
       "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
     image: "https://placehold.co/1920x1080",
   },
   {
-    id: 6,
+    id: 8,
     title: "Web Development",
     description:
       "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
     image: "https://placehold.co/1920x1080",
   },
   {
-    id: 6,
+    id: 9,
     title: "Web Development",
     description:
       "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
     image: "https://placehold.co/1920x1080",
   },
   {
-    id: 6,
+    id: 10,
     title: "Web Development",
     description:
       "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
     image: "https://placehold.co/1920x1080",
   },
   {
-    id: 6,
+    id: 11,
     title: "Web Development",
     description:
       "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
