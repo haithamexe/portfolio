@@ -41,7 +41,7 @@ function ProjectsPreview({ project, setProjectClicked }) {
                       rel="noreferrer"
                       className="themed-element"
                     >
-                      Live website
+                      Website
                       <SquareArrowOutUpRight className="project-preview-link-icon themed-element" />
                     </a>
                   )}

@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "Slyder",
     description:
-      "Full stack MERN social media website targeting web browser power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
+      "Full stack MERN social media website targeting tech power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
     video: "/videos/slyder-video-optimize.mp4",
     links: [
       {

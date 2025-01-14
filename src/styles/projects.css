@@ -95,8 +95,11 @@
   font-size: 1.2rem;
 
   @media screen and (max-width: 900px) {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     margin-top: 0;
+  }
+  @media screen and (max-width: 350px) {
+    font-size: 0.9rem;
   }
 }
 
@@ -110,8 +113,8 @@
   overflow: hidden;
 
   @media screen and (max-width: 900px) {
-    font-size: 0.75rem;
-    padding-right: 0.1rem;
+    font-size: 0.79rem;
+    padding-right: 0rem;
     word-break: keep-all;
   }
 }
@@ -197,7 +200,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 1rem 0rem;
+    padding: 1rem;
   }
 }
 
@@ -217,7 +220,8 @@
   z-index: 100;
 
   @media screen and (max-width: 900px) {
-    padding: 0.5rem;
+    /* padding: 0.6rem; */
+    width: 100%;
   }
 }
 
@@ -287,7 +291,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -300,7 +304,7 @@
 .project-preview-links-wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   /* justify-content: flex-; */
   align-items: flex-end;
   width: 100%;
@@ -323,7 +327,7 @@
   color: var(--text-primary);
   font-weight: 900;
   font-size: 0.9rem;
-  background-color: var(--accent-2);
+  background-color: var(--accent-4);
   padding: 5px 10px;
   border-radius: 15px;
 
@@ -343,7 +347,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     /* padding: 5px 5px; */
     gap: 0.1rem;
   }
@@ -366,17 +370,18 @@
   color: var(--accent);
   width: 70%;
   text-align: left;
-  margin-right: 5%;
+  /* margin-right: 5%; */
 }
 
 .project-preview-description {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-secondary);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
   @media screen and (max-width: 900px) {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    line-height: 1.1rem;
   }
 }
 
@@ -387,7 +392,7 @@
 }
 
 .project-preview-features ul {
-  background-color: var(--accent-2);
+  background-color: var(--accent-3);
   width: 100%;
   border-radius: 15px;
   margin-bottom: 15px;
@@ -402,7 +407,6 @@
 
   @media screen and (max-width: 900px) {
     padding: 0.4rem;
-    font-size: 0.7rem;
     margin-bottom: 13px;
   }
 }
@@ -412,6 +416,11 @@
   padding: 0.2rem 0.5rem;
   border-radius: 15px;
   color: var(--text-secondary);
+
+  @media screen and (max-width: 900px) {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
 }
 
 .project-preview-stack {
@@ -419,6 +428,7 @@
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 15px;
 }
 
 .project-stack-frontend ul,
@@ -434,7 +444,7 @@
 
   @media screen and (max-width: 900px) {
     padding: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
