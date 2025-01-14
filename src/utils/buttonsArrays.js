@@ -83,11 +83,11 @@ export const miscButtons = [
   },
   {
     frontText: "C#",
-    imageUrl: "/images/backend/Csharp.png",
+    imageUrl: "/images/used/Csharp.png",
   },
   {
     frontText: "C",
-    imageUrl: "/images/backend/C.png",
+    imageUrl: "/images/used/C.png",
   },
   {
     frontText: ".NET",

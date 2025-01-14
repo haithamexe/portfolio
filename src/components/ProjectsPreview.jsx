@@ -14,7 +14,17 @@ function ProjectsPreview({
           className="project-close"
           onClick={() => setProjectClicked("")}
         />
-        <img src={project?.image} alt={project?.title} loading="eager" />
+        {project?.video ? (
+          <video
+            src={project?.video}
+            alt={project?.title}
+            loop
+            muted
+            autoPlay
+          ></video>
+        ) : (
+          <img src={project?.image} alt={project?.title} loading="eager" />
+        )}
         <div className="project-preview-header themed-element">
           <h2 className="project-preview-title themed-element">
             {project?.title}

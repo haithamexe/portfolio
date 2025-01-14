@@ -4,7 +4,7 @@ export const projects = [
     title: "Slyder",
     description:
       "Full stack MERN social media website targeting web browser power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
-    image: "/gifs/slyder-gif.gif",
+    video: "/videos/slyder-optimized.mp4",
     links: [
       {
         type: "Frontend Github",

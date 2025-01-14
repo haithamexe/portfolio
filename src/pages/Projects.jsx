@@ -144,8 +144,17 @@ function Projects() {
               onClick={() => setProjectClicked(project.id)}
             >
               <div className="project-body">
-                <img src={project.image} alt={project.title} loading="eager" />
-
+                {project?.video ? (
+                  <video autoPlay loop muted>
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="eager"
+                  />
+                )}
                 <div className="project-info">
                   <h2>{project.title}</h2>
                   <p>
