@@ -129,4 +129,46 @@ export const projects = [
       },
     ],
   },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    title: "Web Development",
+    description:
+      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
+    image: "https://placehold.co/1920x1080",
+  },
 ];
