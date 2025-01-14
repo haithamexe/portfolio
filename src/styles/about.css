@@ -16,6 +16,10 @@
 
   @media screen and (max-width: 900px) {
     padding: 0 0.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20rem;
   }
 }
 
@@ -28,7 +32,8 @@
   }
 
   @media screen and (max-width: 900px) {
-    max-width: 140px;
+    max-width: 220px;
+    margin: 0;
   }
 }
 
@@ -86,10 +91,16 @@
   /* overflow-y: auto;
   overflow-x: hidden; */
   /* margin-left: auto; */
-  /* margin-bottom: auto; */
+  margin-bottom: auto;
   overflow-y: auto;
   overflow-x: hidden;
-  height: 100%;
+  /* width: 60%; */
+  /* height: 100%; */
+  @media screen and (max-width: 900px) {
+    margin: 0;
+    max-width: 220px;
+    min-width: none;
+  }
 }
 
 .section-buttons-front {
@@ -109,14 +120,8 @@
   border-radius: 10px;
 
   @media screen and (max-width: 900px) {
-    width: 70%;
-    height: auto;
-    margin-left: auto;
-  }
-
-  @media screen and (max-width: 730px) {
-    width: 100%;
     padding: 0.2rem;
+    height: 90px;
   }
   /* gap: 1rem; */
 }
@@ -137,16 +142,9 @@
   margin-top: 10px;
 
   @media screen and (max-width: 900px) {
-    width: 70%;
-    height: auto;
-    margin-left: auto;
-  }
-
-  @media screen and (max-width: 730px) {
-    width: 100%;
     padding: 0.2rem;
+    height: 110px;
   }
-  /* gap: 1rem; */
 }
 
 .section-buttons-used {
@@ -165,13 +163,8 @@
   margin-top: 10px;
 
   @media screen and (max-width: 900px) {
-    width: 70%;
-    height: auto;
-    margin-left: auto;
-  }
-  @media screen and (max-width: 730px) {
-    width: 100%;
     padding: 0.2rem;
+    height: 110px;
   }
   /* gap: 1rem; */
 }
@@ -299,6 +292,6 @@
   }
 
   @media screen and (max-width: 900px) {
-    display: none;
+    height: 80px;
   }
 }

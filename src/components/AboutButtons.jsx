@@ -60,7 +60,7 @@ export default function AboutButtons() {
         </div>
         <StaticButtonsMisc />
       </div>
-      {buttonPath.length > 0 && !isMobile && (
+      {buttonPath.length > 0 && (
         <div className="about-button-effect themed-element">
           <RotatingButton
             buttonPath={buttonPath}

@@ -45,6 +45,12 @@ function RotatingButtonObject({ frontText, theme, imageUrl }) {
       position={[0, 0, 0]}
       onPointerOver={() => setHover(true)}
       onPointerOut={() => setHover(false)}
+      onClick={() => {
+        setHover(true);
+        setTimeout(() => {
+          setHover(false);
+        }, 620);
+      }}
     >
       <meshBasicMaterial
         color={
