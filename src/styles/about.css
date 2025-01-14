@@ -246,6 +246,7 @@
   gap: 0 0.2rem;
   text-align: center;
   border-radius: 20px;
+  user-select: none;
 
   @media screen and (max-width: 900px) {
     padding: 0.14rem 0.16rem;
