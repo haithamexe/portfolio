@@ -79,7 +79,7 @@ export const backendButtons = [
 export const miscButtons = [
   {
     frontText: "EJS",
-    imageUrl: "/images/backend/EJS.png",
+    imageUrl: "/images/used/EJS.png",
   },
   {
     frontText: "C#",

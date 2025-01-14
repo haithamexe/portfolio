@@ -261,6 +261,7 @@
   background-color: var(--popup);
   border-radius: 50%;
   transition: all 0.3s ease;
+  z-index: 200;
 
   @media screen and (max-width: 900px) {
     width: 25px;
