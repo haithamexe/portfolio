@@ -7,11 +7,11 @@ export const projects = [
     video: "/videos/slyder-video-optimize.mp4",
     links: [
       {
-        type: "Frontend Github",
+        type: "Frontend",
         url: "https://github.com/haithamexe/Slyder-Frontend",
       },
       {
-        type: "Backend Github",
+        type: "Backend",
         url: "https://github.com/haithamexe/Slyder-Backend",
       },
     ],

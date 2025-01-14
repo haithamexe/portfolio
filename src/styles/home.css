@@ -15,7 +15,7 @@
   text-align: left;
 
   @media screen and (max-width: 750px) {
-    width: 70px;
+    width: 94px;
   }
 }
 
@@ -27,7 +27,7 @@
 
   /* hyphens: auto; */
   @media screen and (max-width: 750px) {
-    font-size: 0.65rem;
+    font-size: 0.84rem;
     /* line-height: 0.95rem; */
   }
 }

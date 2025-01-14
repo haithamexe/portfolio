@@ -68,10 +68,10 @@ function ProjectsPreview({ project, setProjectClicked }) {
 
         {project?.features && (
           <>
-            <h3>Features:</h3>
-
             <div className="project-preview-features themed-element">
               <ul className="themed-element">
+                {/* <h3>Features:</h3> */}
+
                 {project?.features.map((feature, index) => (
                   <li className="themed-element" key={index}>
                     {feature}
