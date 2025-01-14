@@ -8,10 +8,8 @@ export const useThemeContext = () => {
 
 function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    if (typeof window === "undefined") {
-      return "dark";
-    }
-    return localStorage.getItem("theme");
+    const localTheme = localStorage.getItem("theme");
+    return localTheme || "dark";
   });
 
   const [effect, setEffect] = useState("on");
