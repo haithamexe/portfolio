@@ -1,7 +1,6 @@
 import "../styles/projects.css";
 import { useEffect, useState } from "react";
 import ProjectsPreview from "../components/ProjectsPreview";
-import { createPortal } from "react-dom";
 import Portal from "../components/Portal";
 import { projects } from "../utils/projects";
 
@@ -10,6 +9,7 @@ function Projects() {
   const [projectHover, setProjectHover] = useState("");
   const [projectClicked, setProjectClicked] = useState("");
   const [projectPreview, setProjectPreview] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleMouseMove = (e, index) => {
     const card = e.currentTarget;
@@ -40,16 +40,44 @@ function Projects() {
   };
 
   useEffect(() => {
-    if (projectHover || projectClicked) {
-      const id = projectHover || projectClicked;
-      const project = projects.find(
-        (project) => project.id.toString() === id.toString()
-      );
-      setProjectPreview(project);
+    if (isMobile) {
+      if (projectClicked) {
+        const id = projectClicked;
+        const project = projects.find(
+          (project) => project.id.toString() === id.toString()
+        );
+        setProjectPreview(project);
+      } else {
+        setProjectPreview(null);
+      }
     } else {
-      setProjectPreview(null);
+      if (projectHover || projectClicked) {
+        const id = projectHover || projectClicked;
+        const project = projects.find(
+          (project) => project.id.toString() === id.toString()
+        );
+        setProjectPreview(project);
+      } else {
+        setProjectPreview(null);
+      }
     }
-  }, [projectHover, projectClicked]);
+  }, [projectHover, projectClicked, isMobile]);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      if (window.innerWidth <= 900) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   useEffect(() => {
     const container = document.querySelector(".project-preview");
@@ -73,14 +101,28 @@ function Projects() {
   return (
     <Portal>
       <div className="projects">
-        {projectPreview && (
-          <ProjectsPreview
-            projectId={projectHover}
-            projectClicked={projectClicked}
-            project={projectPreview}
-            setProjectClicked={setProjectClicked}
-          />
+        {isMobile ? (
+          <Portal>
+            {projectPreview && (
+              <ProjectsPreview
+                projectId={projectHover}
+                projectClicked={projectClicked}
+                project={projectPreview}
+                setProjectClicked={setProjectClicked}
+              />
+            )}
+          </Portal>
+        ) : (
+          projectPreview && (
+            <ProjectsPreview
+              projectId={projectHover}
+              projectClicked={projectClicked}
+              project={projectPreview}
+              setProjectClicked={setProjectClicked}
+            />
+          )
         )}
+
         <div className="projects-container themed-element">
           {projects.map((project, index) => (
             <div
