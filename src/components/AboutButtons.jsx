@@ -1,8 +1,4 @@
-import RotatingButtonBackEnd from "./buttons/RotatingButtonBackEnd";
-import RotatingButtonFrontEnd from "./buttons/RotatingButtonFrontEnd";
-import RotatingButtonMisc from "./buttons/RotatingButtonMisc";
 import { MousePointerClick } from "lucide-react";
-import { useState, useEffect } from "react";
 import { useButtonContext } from "../context/ButtonProvider";
 import StaticButtonsBackEnd from "./buttons/StaticButtonsBackEnd";
 import StaticButtonsFrontEnd from "./buttons/StaticButtonsFrontEnd";
@@ -11,31 +7,6 @@ import RotatingButton from "./buttons/RotaingButton";
 
 export default function AboutButtons() {
   const { buttonPath } = useButtonContext();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth <= 900) {
-      setIsMobile(true);
-    }
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth <= 900) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    });
-
-    return () => {
-      window.removeEventListener("resize", () => {
-        if (window.innerWidth <= 900) {
-          setIsMobile(true);
-        } else {
-          setIsMobile(false);
-        }
-      });
-    };
-  }, []);
 
   return (
     <>
