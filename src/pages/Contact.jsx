@@ -98,6 +98,32 @@ const Contect = () => {
             rows={3}
           />
           <div className="form-footer themed-element">
+            <div className="socials">
+              <a
+                href="https://www.linkedin.com/in/haithamexe"
+                target="_blank"
+                rel="noreferrer"
+                className="themed-element"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://www.instagram.com/haitham.on"
+                target="_blank"
+                rel="noreferrer"
+                className="themed-element"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://github.com/haithamexe"
+                target="_blank"
+                rel="noreferrer"
+                className="themed-element"
+              >
+                Github
+              </a>
+            </div>
             {isSent && <p>Email sent successfully!</p>}
             {error && <p style={{ color: "red" }}>{error}</p>}
             <button type="submit">

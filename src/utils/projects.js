@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "Slyder",
     description:
-      "Full stack MERN social media website targeting tech power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
+      "Full stack MERN, Redux social media website targeting tech power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
     video: "/videos/slyder-video-optimize.mp4",
     links: [
       {
@@ -21,7 +21,7 @@ export const projects = [
 
     features: [
       "Self authentication",
-      "Real time messaging with Socket.io built from scratch",
+      "Real time Encrypted messaging with Socket.io built from scratch",
       "Posts",
       "Comments",
       "Notifications",
@@ -31,19 +31,24 @@ export const projects = [
       "UI Customization",
       "Custom Recommendation Algorithem",
       "3D Interactive UI",
+      "Scalable",
+      "Refresh Tokens",
+      "session management",
     ],
 
     stack: {
       frontend: [
         "React",
         "Redux",
+        "Redux-RTK",
         "Material-UI",
         "Socket.io",
         "Axios",
         "Vanilla CSS",
         "Javascript",
-        "Vercel",
+        "Crypto-js",
         "Self Auth",
+        "Vercel",
       ],
       backend: [
         "Node.js",
@@ -56,6 +61,22 @@ export const projects = [
         "Javascript",
         "Render",
       ],
+    },
+  },
+  {
+    id: 6,
+    title: "React Native E-commerce",
+    description: "A mobile e-commerce app built with React Native.",
+    video: "/videos/rna-ecommerce.mp4",
+    links: [
+      {
+        type: "Github",
+        url: "https://github.com/haithamexe/React-Native-E-commerce",
+      },
+    ],
+    features: ["React Navigation", "Cross Platform", "Scalable"],
+    stack: {
+      frontend: ["React Native", "Expo", "React Navigation, TypeScript"],
     },
   },
   {
@@ -128,47 +149,5 @@ export const projects = [
         url: "https://sites.google.com/view/haithamexist/home",
       },
     ],
-  },
-  {
-    id: 6,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
-  },
-  {
-    id: 7,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
-  },
-  {
-    id: 8,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
-  },
-  {
-    id: 9,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
-  },
-  {
-    id: 10,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
-  },
-  {
-    id: 11,
-    title: "Web Development",
-    description:
-      "A collection of websites and web applications made with React, Next.js, Gatsby, and more.",
-    image: "https://placehold.co/1920x1080",
   },
 ];

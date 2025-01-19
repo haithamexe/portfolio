@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { Item } from "../utils/effectScript.js";
-import "../styles/effect.css";
+import { Item } from "../../utils/effectScript";
+import "../../styles/effect.css";
 
 function Effect({ effect }) {
   const itemRef = useRef(null);

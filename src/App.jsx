@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 import Layout from "./components/Layout";
 import Blog from "./pages/Blog";
+import Playground from "./pages/Playground";
 
 function App() {
   useEffect(() => {
@@ -92,6 +93,14 @@ function App() {
           element={
             <PageTransition>
               <Resume />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/playground"
+          element={
+            <PageTransition>
+              <Playground />
             </PageTransition>
           }
         />

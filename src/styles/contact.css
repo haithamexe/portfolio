@@ -92,6 +92,20 @@
   /* gap: 10px; */
 }
 
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  height: 35px;
+}
+
+.socials a {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 900px) {
   .contact-container {
     font-size: 0.9rem !important;
@@ -109,5 +123,14 @@
   .contact-container form input,
   .contact-container form textarea {
     font-size: 1rem;
+  }
+
+  .socials {
+    gap: 10px;
+    height: 25px;
+  }
+
+  .socials a {
+    font-size: 0.75rem;
   }
 }

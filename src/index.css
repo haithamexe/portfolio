@@ -59,6 +59,8 @@
   --overlay-light-right: rgba(138, 138, 138, 0.8);
   --overlay-light-left: rgba(255, 255, 255, 0.1);
   --shadow-light: rgba(0, 0, 0, 0.14);
+  --shadow-slyder-buttons-light: 10px 10px 25px #a0a0a0, -5px -5px 15px #ffffff;
+  --shadow-slyder-input-light: 15px 8px 14px #646464, -5px -5px 15px #ffffff;
 
   /* Dark theme */
   --background-dark: #080808;
@@ -75,6 +77,8 @@
   --overlay-dark-right: rgba(0, 0, 0, 0.8);
   --overlay-dark-left: rgba(255, 255, 255, 0.1);
   --shadow-dark: rgba(155, 155, 155, 0.1);
+  --shadow-slyder-buttons-dark: 10px 10px 25px #000000, -5px -5px 15px #252525;
+  --shadow-slyder-input-dark: 15px 8px 14px #000000, -5px -5px 15px #242424;
 }
 
 [data-theme="light"] {
@@ -93,6 +97,8 @@
   --overlay-left: var(--overlay-light-left);
   --shadow: var(--shadow-light);
   --popup: #ececec;
+  --shadow-slyder-buttons: var(--shadow-slyder-buttons-light);
+  --shadow-slyder-input: var(--shadow-slyder-input-light);
 }
 
 [data-theme="dark"] {
@@ -111,6 +117,8 @@
   --overlay-left: var(--overlay-dark-left);
   --shadow: var(--shadow-dark);
   --popup: #1a1a1a;
+  --shadow-slyder-buttons: var(--shadow-slyder-buttons-dark);
+  --shadow-slyder-input: var(--shadow-slyder-input-dark);
 }
 
 a {

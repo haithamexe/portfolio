@@ -3,7 +3,7 @@ import { Moon, Sun, Square, Leaf } from "lucide-react";
 import { useThemeContext } from "../context/ThemeProvider";
 import { useState, useRef, useEffect } from "react";
 import "../styles/main.css";
-import Effect from "./Effect";
+import Effect from "./effects/Effect";
 
 function Layout() {
   const { theme, toggleTheme, effect, toggleEffect } = useThemeContext();
@@ -11,6 +11,14 @@ function Layout() {
   const [navigation, setNavigation] = useState("home");
   const [indicatorStyle, setIndicatorStyle] = useState({});
   const navRef = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, []);
 
   const updateIndicator = (e) => {
     if (!e) return;
@@ -98,18 +106,36 @@ function Layout() {
                 { id: "about", path: "/about" },
                 { id: "projects", path: "/projects" },
                 { id: "contact", path: "/contact" },
-                { id: "resume", path: "/resume" },
-              ].map(({ id, path }) => (
-                <Link
-                  key={id}
-                  onClick={(e) => handleNavigation(e, path, id)}
-                  className={`nav-link ${navigation === id ? "active" : ""}`}
-                  to={path}
-                  data-nav={id}
-                >
-                  {id.charAt(0).toUpperCase() + id.slice(1)}
-                </Link>
-              ))}
+                {
+                  id: "resume",
+                  path: "https://resume-haithamexes-projects.vercel.app/",
+                },
+                { id: "playground", path: "/playground" },
+              ].map(({ id, path }) =>
+                isMobile && id === "playground" ? null : id === "resume" ? (
+                  <a
+                    key={id}
+                    href={path}
+                    className={`nav-link ${navigation === id ? "active" : ""}`}
+                    data-nav={id}
+                    target="_blank"
+                    rel="noreferrer"
+                    // onClick={(e) => handleNavigation(e, path, id)}
+                  >
+                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                  </a>
+                ) : (
+                  <Link
+                    key={id}
+                    onClick={(e) => handleNavigation(e, path, id)}
+                    className={`nav-link ${navigation === id ? "active" : ""}`}
+                    to={path}
+                    data-nav={id}
+                  >
+                    {id.charAt(0).toUpperCase() + id.slice(1)}
+                  </Link>
+                )
+              )}
             </div>
           </div>
           {/* <Effect effect={effect} /> */}

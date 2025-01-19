@@ -71,7 +71,7 @@ export const backendButtons = [
     image: "/images/RestApi.webp",
   },
   {
-    frontText: "Restfull",
+    frontText: "Restful",
     image: "/images/Restfull.webp",
   },
 ];
