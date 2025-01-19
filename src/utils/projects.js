@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     title: "Slyder",
     description:
-      "Full stack MERN, Redux social media website targeting tech power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation algorithem .",
+      "Full stack MERN, Redux social media website targeting tech power users, with features built from scratch such as authentication,messaging ,posts, comments, likes, notes, archives, and expermintal features like having the ability to adjust the UI and the recommendation Algorithm .",
     video: "/videos/slyder-video-optimize.mp4",
     links: [
       {
@@ -20,20 +20,20 @@ export const projects = [
       "Email: demo@mail.com, Password: demo1234, *demo account resets on logout and inactivity*",
 
     features: [
-      "Self authentication",
-      "Real time Encrypted messaging with Socket.io built from scratch",
+      "Self Authentication",
+      "Real time encrypted messaging with Socket.io built from scratch",
       "Posts",
       "Comments",
       "Notifications",
       "Likes",
       "Notes",
       "Archives",
-      "UI Customization",
-      "Custom Recommendation Algorithem",
-      "3D Interactive UI",
+      "UI customization",
+      "Custom recommendation algorithm",
+      "3D interactive UI",
       "Scalable",
-      "Refresh Tokens",
-      "session management",
+      "Refresh tokens",
+      "Session management",
     ],
 
     stack: {
@@ -96,7 +96,7 @@ export const projects = [
       "p5.js",
       "HTML Canvas",
       "Javascript",
-      "Creative Coding",
+      "Creative coding",
       "Customizable with sliders",
     ],
     stack: {
@@ -107,7 +107,7 @@ export const projects = [
     id: 3,
     title: "Spotify Recommendation Algorithm",
     description:
-      "A Recommendation Algorithm for Spotify data base made with python and scikit-learn using k-means and clustring to find similarities in clusters and then using a decision tree to finish recommending similar songs .",
+      "A Recommendation Algorithm for Spotify data base made with python and scikit-learn using K-means and Clustering to find similarities in clusters and then using a decision tree to finish recommending similar songs .",
     image: "/images/spotify-recommendation.webp",
     links: [
       {
@@ -121,7 +121,7 @@ export const projects = [
       "Python",
       "Scikit-learn",
       "K-means",
-      "Clustring",
+      "Clustering",
       "Decision Tree",
       "Spotify API",
     ],
