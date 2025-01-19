@@ -28,6 +28,11 @@
   /* hyphens: auto; */
   @media screen and (max-width: 750px) {
     font-size: 0.84rem;
+    hyphens: auto;
+    word-spacing: -0.05rem;
+
+    /* word-break: keep-all; */
+    /* text-align: left; */
     /* line-height: 0.95rem; */
   }
 }

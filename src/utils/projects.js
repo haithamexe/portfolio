@@ -105,9 +105,9 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Spotify Recommendation Algorithem",
+    title: "Spotify Recommendation Algorithm",
     description:
-      "A recommendation algorithem for Spotify data base made with python and scikit-learn using k-means and clustring to find similarties in clusters and then using a decision tree to finish recommending similar songs .",
+      "A Recommendation Algorithm for Spotify data base made with python and scikit-learn using k-means and clustring to find similarities in clusters and then using a decision tree to finish recommending similar songs .",
     image: "/images/spotify-recommendation.webp",
     links: [
       {
@@ -117,7 +117,7 @@ export const projects = [
     ],
 
     features: [
-      "Recommendation Algorithem",
+      "Recommendation Algorithm",
       "Python",
       "Scikit-learn",
       "K-means",
