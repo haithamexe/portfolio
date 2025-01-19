@@ -4,6 +4,7 @@ import { useThemeContext } from "../context/ThemeProvider";
 import { useState, useRef, useEffect } from "react";
 import "../styles/main.css";
 import Effect from "./effects/Effect";
+import Portal from "./Portal";
 
 function Layout() {
   const { theme, toggleTheme, effect, toggleEffect } = useThemeContext();
@@ -138,7 +139,7 @@ function Layout() {
               )}
             </div>
           </div>
-          {/* <Effect effect={effect} /> */}
+          <Effect effect={effect} />
           <Outlet />
         </div>
         <div className="side-toggles themed-element">
