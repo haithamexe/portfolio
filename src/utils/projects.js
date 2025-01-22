@@ -34,6 +34,7 @@ export const projects = [
       "Scalable",
       "Refresh tokens",
       "Session management",
+      "optimistic updates",
     ],
 
     stack: {
