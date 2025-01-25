@@ -2,135 +2,260 @@
 
 .playground {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  /* align-items: center; */
+  justify-content: flex-end;
+  height: 100%;
   width: 100%;
-  display: none;
+  overflow: hidden;
   /* position: absolute; */
   /* top: 0; */
   /* left: 0; */
   /* z-index: 99; */
 }
 
-.chat-play {
-  /* position: absolute;
-  top: 55px;
-  right: 40px;
-  width: 400px; */
+.playground-cards-container {
+  height: 100%;
+  width: 1010px;
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  gap: 15px 20px;
+  overflow-y: auto;
+  perspective: 2000px;
+  padding: 1rem;
+  padding-top: 10px;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.playground-card {
+  width: 210px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px; */
+
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  /* background-color: var(--accent-2); */
+  background-color: var(--surface);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.1s ease;
+  transform-style: preserve-3d;
+  box-shadow: -1px 0 10px var(--shadow);
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.playground-card-image-wrapper {
+  display: flex;
+  /* height: 100%; */
+  width: 100%;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* gap: 1rem; */
+  /* height: 85%; */
+  padding: 5px;
+}
+
+.playground-card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px 15px 0 0;
+}
+.playground-card-image-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px 15px 0 0;
+}
+
+.playground-card-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  height: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* adding the gradiant effect */
+
+.playground-card {
+  position: relative; /* Required for absolute positioning of gradient */
+}
+
+.playground-card::before {
+  content: "";
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 17px;
-  margin-right: 30px;
-  height: 805px;
-
-  /* height: 100vh; */
-  /* height: 100%; */
-  padding: 10px;
-
-  gap: 20vh 0;
-
-  @media screen and (max-width: 720px) {
-    gap: 11vh 0;
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: background 0.5s;
+  background: linear-gradient(
+    155deg,
+    var(--overlay-left) 20%,
+    var(--overlay-right) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
 }
 
-.chat-play-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px 0;
+.playground-effect-Preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 99;
+  padding: 5rem 5rem;
+  overflow: hidden;
+
+  background-color: var(--overlay-right);
 }
 
-.chat-play-box {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  gap: 18px 0;
-  gap: 1.95vh 0;
+.playground-effect-Preview-container {
+  background-color: var(--popup);
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
-  padding: 16px 20px;
-  padding: 3vh 20px;
-
-  @media screen and (max-height: 800px) {
-    gap: 1.6vh 0;
-    padding: 1.5vh 20px;
-  }
-  /* margin-top: 25px; */
-  /* background-color: var(--bg-s-third); */
-  /* border: 1px solid var(--bg-s-border); */
+  overflow: hidden;
 }
 
-.chat-play-buttons {
-  /* position: relative; */
+.playground-effect-Preview-content-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 330px;
-  gap: 0 10px;
-  padding: 20px;
-  padding: 2.2vh 20px;
-
-  height: 30px;
-  border-radius: 10px;
+  width: 100%;
+  padding: 1rem;
   background-color: var(--surface);
-  box-shadow: var(--shadow-slyder-buttons);
-  /* box-shadow: 10px 10px 25px #09090c, -5px -5px 15px #2d3045; */
-  /* visibility: inherit; */
+  background-color: var(--accent-2);
+  border: 2px solid var(--border);
+  border-radius: 15px 15px 0 0;
 }
 
-.chat-play-buttons h1 {
-  color: var(--text-primary);
-  font-size: 0.7rem;
-  font-weight: 900;
-  margin: 0 4px;
-}
+.playground-effect-Preview-close {
+  width: 40px;
+  height: 40px;
+  padding: 0.3rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background-color: var(--popup);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 200;
 
-.chat-play-buttons input {
-  /* flex-grow: 1; */
-  width: 190px;
-  height: 12px;
-  appearance: none;
-  background: var(--accent-3);
-  outline: none;
-  border-radius: 15px;
-  box-shadow: var(--shadow-slyder-input);
-}
-
-.chat-play-buttons span {
-  text-align: center;
-  color: var(--text-primary);
-  width: 30px;
-  font-size: 0.7rem;
-  font-weight: 900;
-  margin: 0 7px;
-}
-
-@supports (not selector(::-webkit-slider-thumb)) {
-  .chat-play-buttons input::-moz-range-thumb {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: var(--text-primary);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+  @media screen and (max-width: 900px) {
+    width: 35px;
+    height: 35px;
+    padding: 0.2rem;
   }
 }
 
-.chat-play-buttons input::-webkit-slider-thumb {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background: var(--text-primary);
-  border-radius: 50%;
-  cursor: pointer;
+.playground-effect-preview-content-body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.stacked-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.stacked-card {
+  width: 700px;
+  /* height: 310px; */
+  position: relative;
+  top: -100px;
+  background-color: var(--surface);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 1px solid var(--accent-2);
+}
+
+.stacked-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100%; */
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.stacked-card-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+.stacked-card p {
+  font-weight: 700;
+  color: var(--popup);
+}
+
+.stacked-card-img-container {
+  /* width: 100%; */
+  /* height: 40%; */
+  /* border-radius: 15px; */
+}
+
+.stacked-card-img-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.stacked-card-img-inner img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+.stacked-card-content {
+}
+
+.stacked-cards-wrapper {
+  padding-top: 180px;
+  padding-bottom: 400px;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.stacked-cards-footer-p {
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 700;
+  color: var(--accent-2);
+  /* height: 100vh; */
 }
