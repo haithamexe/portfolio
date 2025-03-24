@@ -4,6 +4,7 @@ import ProjectsPreview from "../components/ProjectsPreview";
 import Portal from "../components/Portal";
 import { projects } from "../utils/projects";
 import { useMediaContext } from "../context/MediaProvider";
+import { motion } from "motion/react";
 
 function Projects() {
   const [transform, setTransform] = useState({});
@@ -104,7 +105,13 @@ function Projects() {
 
   return (
     <Portal>
-      <div className="projects">
+      <motion.div
+        className="projects"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+      >
         {isMobile ? (
           <Portal>
             {projectPreview && (
@@ -180,7 +187,7 @@ function Projects() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </Portal>
   );
 }

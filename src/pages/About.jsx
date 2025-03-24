@@ -3,6 +3,7 @@ import "../styles/about.css";
 import AboutButtons from "../components/AboutButtons";
 import { ButtonProvider } from "../context/ButtonProvider";
 import { useMediaContext } from "../context/MediaProvider";
+import { motion } from "motion/react";
 
 function About() {
   const { theme } = useThemeContext();
@@ -12,7 +13,13 @@ function About() {
   const photoDarkSm = media["/images/photo-dark-sm.webp"]?.src;
 
   return (
-    <div className="about">
+    <motion.div
+      className="about"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+    >
       <div className="about-card ">
         <img
           src={theme === "dark" ? photoDarkSm : photoLightSm}
@@ -34,7 +41,7 @@ function About() {
       <div className="about-buttons-sections">
         <ButtonProvider>{<AboutButtons />}</ButtonProvider>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

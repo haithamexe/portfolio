@@ -69,18 +69,20 @@ function Layout() {
   const handleNavigation = (e, path, id) => {
     e.preventDefault();
     if (navigation === id) return;
-    const page = document.querySelector(".page-transition");
-    if (page) {
-      page.classList.add("fade-exit");
-      page.classList.remove("fade-enter");
-      setTimeout(() => {
-        setNavigation(id);
-      }, 700);
+    // const page = document.querySelector(".page-transition");
+    // if (page) {
+    //   page.classList.add("fade-exit");
+    //   page.classList.remove("fade-enter");
+    //   setTimeout(() => {
+    //     setNavigation(id);
+    //   }, 700);
 
-      setTimeout(() => {
-        navigate(path);
-      }, 700);
-    }
+    //   setTimeout(() => {
+    //     navigate(path);
+    //   }, 700);
+    // }
+    setNavigation(id);
+    navigate(path);
   };
 
   return (
