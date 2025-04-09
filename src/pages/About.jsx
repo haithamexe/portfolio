@@ -2,15 +2,10 @@ import { useThemeContext } from "../context/ThemeProvider";
 import "../styles/about.css";
 import AboutButtons from "../components/AboutButtons";
 import { ButtonProvider } from "../context/ButtonProvider";
-import { useMediaContext } from "../context/MediaProvider";
 import { motion } from "motion/react";
 
 function About() {
   const { theme } = useThemeContext();
-  const { media } = useMediaContext();
-
-  const photoLightSm = media["/images/photo-light-sm.webp"]?.src;
-  const photoDarkSm = media["/images/photo-dark-sm.webp"]?.src;
 
   return (
     <motion.div
@@ -22,7 +17,11 @@ function About() {
     >
       <div className="about-card ">
         <img
-          src={theme === "dark" ? photoDarkSm : photoLightSm}
+          src={
+            theme === "dark"
+              ? "/images/photo-dark-sm.webp"
+              : "/images/photo-light-sm.webp"
+          }
           className="about-image themed-element"
           alt="A portrait of the author"
           loading="lazy"

@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import ProjectsPreview from "../components/ProjectsPreview";
 import Portal from "../components/Portal";
 import { projects } from "../utils/projects";
-import { useMediaContext } from "../context/MediaProvider";
 import { motion } from "motion/react";
 
 function Projects() {
@@ -12,9 +11,6 @@ function Projects() {
   const [projectClicked, setProjectClicked] = useState("");
   const [projectPreview, setProjectPreview] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
-  const { media } = useMediaContext();
-
-  console.log("projects", media);
 
   const handleMouseMove = (e, index) => {
     const card = e.currentTarget;
@@ -155,17 +151,17 @@ function Projects() {
               onClick={() => setProjectClicked(project.id)}
             >
               <div className="project-body">
-                {project?.video ? (
+                {project.video ? (
                   <video
                     autoPlay
                     loop
                     muted
-                    src={media[project?.video]?.src || project?.video}
+                    src={project.video}
                     alt={project.title}
                   ></video>
                 ) : (
                   <img
-                    src={media[project?.image]?.src || project?.image}
+                    src={project.image}
                     alt={project.title}
                     loading="eager"
                   />

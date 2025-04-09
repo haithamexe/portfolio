@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext, useContext } from "react";
+import { useEffect, createContext, useContext } from "react";
 import { projects } from "../utils/projects";
 import { buttonsArrays } from "../utils/buttonsArrays";
 
@@ -9,47 +9,32 @@ export const useMediaContext = () => {
 };
 
 const preloadMedia = (paths) => {
-  const mediaObj = {};
+  const extension = paths[0].split(".").pop();
   paths.map((path) => {
-    if (path.endsWith(".mp4")) {
+    if (extension === "mp4") {
       const video = document.createElement("video");
       video.src = path;
-      mediaObj[path] = video;
     } else {
       const img = new Image();
       img.src = path;
-      mediaObj[path] = img;
     }
   });
-
-  return mediaObj;
 };
 
 const projectMediaPaths = projects.flatMap((project) =>
   [project.image, project.video].filter(Boolean)
 );
 
-console.log(projectMediaPaths);
-
 const buttonImagePaths = buttonsArrays.flatMap((button) =>
   [button.image].filter(Boolean)
 );
 
-const preloadedMedia = preloadMedia([
-  ...projectMediaPaths,
-  ...buttonImagePaths,
-]);
-
 function MediaProvider({ children }) {
-  const [media, setMedia] = useState({});
-
   useEffect(() => {
-    setMedia(preloadedMedia);
+    preloadMedia([...projectMediaPaths, ...buttonImagePaths]);
   }, []);
 
-  return (
-    <MediaContext.Provider value={{ media }}>{children}</MediaContext.Provider>
-  );
+  return <MediaContext.Provider value={{}}>{children}</MediaContext.Provider>;
 }
 
 export default MediaProvider;
