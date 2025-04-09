@@ -1,28 +1,23 @@
 import { useEffect, useRef } from "react";
-import { Item } from "../../utils/effectScript";
 import "../../styles/effect.css";
+import Portal from "../../components/Portal";
 
 function Effect({ effect }) {
   const itemRef = useRef(null);
 
-  useEffect(() => {
-    const items = document.querySelectorAll(".grid__item");
-    items.forEach((item) => new Item(item));
-    console.log(items);
-
-    // new Item(itemRef.current);
-  }, []);
-
   return (
-    <div>
-      <div className={effect === "on" ? "grid" : "grid hide"}>
-        <div className="grid__item">
-          <div className="grid__item-img">
-            <div className="grid__item-img-deco"></div>
-          </div>
-        </div>
+    <Portal>
+      <div className="effect-container">
+        <video
+          className={effect === "on" ? "effect-video" : "effect-video-hidden"}
+          autoPlay
+          loop
+          muted
+          src="/videos/7020085_Black_White_3840x2160.mov"
+          type="video/mp4"
+        ></video>
       </div>
-    </div>
+    </Portal>
   );
 }
 

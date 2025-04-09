@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
+import { motion } from "motion/react";
 
 const Contect = () => {
   const [formData, setFormData] = useState({
@@ -62,7 +63,13 @@ const Contect = () => {
   };
 
   return (
-    <div className="contact themed-element">
+    <motion.div
+      className="contact themed-element"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, delay: 0.3, ease: "easeInOut" }}
+    >
       <div className="contact-container themed-element">
         <h1>Contact Me</h1>
         <form onSubmit={handleSubmit}>
@@ -132,7 +139,7 @@ const Contect = () => {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

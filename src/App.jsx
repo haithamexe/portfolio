@@ -40,78 +40,15 @@ function App() {
   }, []);
 
   return (
-    // <Suspense
-    //   fallback={
-    //     <div
-    //       style={{
-    //         display: "flex",
-    //         justifyContent: "center",
-    //         alignItems: "center",
-    //         height: "100vh",
-    //         width: "100vw",
-    //         backgroundColor: "#080808",
-    //       }}
-    //     ></div>
-    //   }
-    // >
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route
-          index
-          element={
-            <PageTransition>
-              <Home />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <PageTransition>
-              <About />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <PageTransition>
-              <Projects />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <PageTransition>
-              <Contact />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/resume"
-          element={
-            <PageTransition>
-              <Resume />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="/playground"
-          element={
-            <PageTransition>
-              <Playground />
-            </PageTransition>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <PageTransition>
-              <Navigate to={"/"} replace />
-            </PageTransition>
-          }
-        />
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/playground" element={<Playground />} />
+        <Route path="*" element={<Navigate to={"/"} replace />} />
       </Route>
     </Routes>
     // </Suspense>

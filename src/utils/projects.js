@@ -137,6 +137,12 @@ export const projects = [
     description:
       "A collection of graphic designs made with Adobe Photoshop for different clients.",
     image: "/images/graphic-designs.webp",
+    links: [
+      {
+        type: "Portfolio",
+        url: "https://sites.google.com/view/haithamexist/home",
+      },
+    ],
   },
   {
     id: 5,

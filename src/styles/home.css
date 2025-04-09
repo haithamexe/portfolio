@@ -6,12 +6,10 @@
   align-items: flex-end;
   padding-right: 1.2rem;
   padding-bottom: 1rem;
-  /* display: flex; */
 }
 
 .home-text-wrapper {
   width: 120px;
-
   text-align: left;
 
   @media screen and (max-width: 750px) {
@@ -22,17 +20,11 @@
 .home h2 {
   font-size: 1rem;
   text-align: justify;
-  /* word-spacing: -0.05rem; */
   word-break: break-all;
 
-  /* hyphens: auto; */
   @media screen and (max-width: 750px) {
     font-size: 0.84rem;
     hyphens: auto;
     word-spacing: -0.05rem;
-
-    /* word-break: keep-all; */
-    /* text-align: left; */
-    /* line-height: 0.95rem; */
   }
 }

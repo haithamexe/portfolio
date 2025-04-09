@@ -1,120 +1,30 @@
-.grid__item {
-  /* padding: 1.5rem 1.5rem 2rem; */
-  display: grid;
-  gap: 1.5rem;
-  background: var(--surface);
-  align-content: start;
-  grid-template-rows: auto 1fr auto;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  /* z-index: 1; */
-  @media screen and (max-width: 900px) {
-    /* padding: 1rem 1rem 1rem; */
-    /* display: none; */
-    /* overflow: visible; */
-  }
-}
-
-.grid__item-img {
-  width: 100%;
-  /* height: 100%; */
-  aspect-ratio: 1;
+.effect-container {
+  display: block;
   position: relative;
-  top: 0;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  --x: 150px;
-  --y: 850px;
-  overflow: hidden;
-
-  /* z-index: 1; */
-
-  @media screen and (max-width: 900px) {
-    height: 100%;
-    transform: translate(0, 500px);
-
-    /* padding: 1rem 1rem 1rem; */
-    /* display: none; */
-    /* overflow: visible; */
-  }
-}
-
-.grid__item-img::after {
-  content: "";
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  z-index: 0;
   overflow: hidden;
-
-  /* z-index: 1; */
-
-  /* background: radial-gradient(
-    rgb(17, 26, 19) 20%,
-    rgb(102, 51, 238) 50%,
-    rgb(142, 100, 255),
-    rgb(249, 38, 114)
-  ); */
-  mix-blend-mode: darken;
+  border-radius: 10px;
 }
 
-.grid__item-img-deco {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
+.effect-container video {
   width: 100%;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 0.7rem;
-  word-wrap: break-word;
-  line-height: 1.15;
-  color: var(--text-primary);
-  opacity: 0;
-  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
 
-  /* z-index: 1; */
+  /* filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px); */
 
-  -webkit-mask-image: radial-gradient(
-    700px circle at var(--x) var(--y),
-    black 17%,
-    rgba(0, 0, 0, 0.25),
-    transparent
-  );
-  mask-image: radial-gradient(
-    700px circle at var(--x) var(--y),
-    black 17%,
-    rgba(0, 0, 0, 0.25),
-    transparent
-  );
-
-  @media screen and (max-width: 900px) {
-    height: 100%;
-
-    -webkit-mask-image: radial-gradient(
-      900px circle at var(--x) var(--y),
-      black 10%,
-      rgba(0, 0, 0, 0.17),
-      transparent
-    );
-    mask-image: radial-gradient(
-      900px circle at var(--x) var(--y),
-      black 10%,
-      rgba(0, 0, 0, 0.17),
-      transparent
-    );
-    /* display: none; */
-  }
+  opacity: 0.9;
 }
 
-.hide {
-  opacity: 0;
-  visibility: hidden;
+.effect-video-hidden {
+  display: none;
 }

@@ -69,18 +69,6 @@ function Layout() {
   const handleNavigation = (e, path, id) => {
     e.preventDefault();
     if (navigation === id) return;
-    // const page = document.querySelector(".page-transition");
-    // if (page) {
-    //   page.classList.add("fade-exit");
-    //   page.classList.remove("fade-enter");
-    //   setTimeout(() => {
-    //     setNavigation(id);
-    //   }, 700);
-
-    //   setTimeout(() => {
-    //     navigate(path);
-    //   }, 700);
-    // }
     setNavigation(id);
     navigate(path);
   };
@@ -113,7 +101,6 @@ function Layout() {
                   id: "resume",
                   path: "https://resume-haithamexes-projects.vercel.app/",
                 },
-                { id: "playground", path: "/playground" },
               ].map(({ id, path }) =>
                 isMobile && id === "playground" ? null : id === "resume" ? (
                   <a
@@ -141,7 +128,7 @@ function Layout() {
               )}
             </div>
           </div>
-          <Effect effect={effect} />
+          {/* <Effect effect={effect} /> */}
           <Outlet />
         </div>
         <div className="side-toggles themed-element">
@@ -160,7 +147,7 @@ function Layout() {
               />
             )}
           </div>
-          <div
+          {/* <div
             onClick={toggleEffect}
             className="side-toggle side-toggle-effect"
           >
@@ -174,7 +161,7 @@ function Layout() {
               }}
             />
             <p className="side-toggle-p">Effect</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="side-footer themed-element">&#169; Haitham Jalal</div>
