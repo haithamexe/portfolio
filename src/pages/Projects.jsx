@@ -160,11 +160,7 @@ function Projects() {
                     alt={project.title}
                   ></video>
                 ) : (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="eager"
-                  />
+                  <img src={project.image} alt={project.title} loading="lazy" />
                 )}
                 <div className="project-info">
                   <h2>{project.title}</h2>
