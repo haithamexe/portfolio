@@ -81,6 +81,22 @@ export const projects = [
     },
   },
   {
+    id: 7,
+    title: "Mega Group",
+    description: "Mega Group Fullstack Website.",
+    image: "/images/mega-group.jpg",
+    links: [
+      {
+        type: "Website",
+        url: "https://mega-group-sable.vercel.app/",
+      },
+    ],
+    features: ["React Navigation", "Fast", "Responsive", "Interactive"],
+    stack: {
+      frontend: ["React"],
+    },
+  },
+  {
     id: 2,
     title: "Generative Art Codes",
     description:
