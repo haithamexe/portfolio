@@ -124,7 +124,7 @@ function Playground() {
 
   useEffect(() => {
     if (cardClicked) {
-      setCard(totalElements.find((item) => item.id === cardClicked));
+      setCard(totalElements.find((item) => item?.id === cardClicked));
       console.log(cardClicked);
     } else {
       setCard(null);
@@ -147,25 +147,25 @@ function Playground() {
             onClick={() => setCardClicked(effect.id)}
           >
             <div className="playground-card-image-wrapper">
-              {effect?.video ? (
+              {/* {effect?.video ? (
                 <video
                   autoPlay
                   loop
                   muted
                   src={media[effect?.video]?.src || effect?.video}
-                  alt={effect.title}
+                  alt={effect?.title}
                 ></video>
               ) : (
                 <img
                   src={media[effect?.image]?.src || effect?.image}
-                  alt={effect.title}
+                  alt={effect?.title}
                   loading="eager"
                 />
-              )}
+              )} */}
             </div>
 
             <div className="playground-card-info">
-              <h2>{effect.title}</h2>
+              <h2>{effect?.title}</h2>
             </div>
             {/* <p>Click to view</p> */}
             {/* <div className="playground-card-footer">
@@ -185,9 +185,9 @@ function Playground() {
                 />
               </div>
               <div className="playground-effect-preview-content-body">
-                {card.title === "Stacked Cards" ? <StackedCards /> : null}
-                {card.title === "Header" ? <HeaderScroll /> : null}
-                {card.title === "Text Scramble" ? <TextScramble /> : null}
+                {card?.title === "Stacked Cards" ? <StackedCards /> : null}
+                {card?.title === "Header" ? <HeaderScroll /> : null}
+                {card?.title === "Text Scramble" ? <TextScramble /> : null}
               </div>
             </div>
           </div>
