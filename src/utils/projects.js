@@ -88,7 +88,7 @@ export const projects = [
     links: [
       {
         type: "Website",
-        url: "https://mega-group-sable.vercel.app/",
+        url: "https://megagroup.ly/",
       },
     ],
     features: ["React Navigation", "Fast", "Responsive", "Interactive"],
