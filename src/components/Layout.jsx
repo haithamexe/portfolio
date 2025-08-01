@@ -144,10 +144,10 @@ function Layout() {
                 },
                 { id: "contact", path: "/contact" },
                 { id: "projects", path: "/projects" },
-                {
-                  id: "playground",
-                  path: "/playground",
-                },
+                // {
+                //   id: "playground",
+                //   path: "/playground",
+                // },
               ].map(({ id, path }) =>
                 isMobile && id === "playground" ? null : id === "resume" ? (
                   <a
@@ -168,7 +168,10 @@ function Layout() {
                 ) : (
                   <Link
                     key={id}
-                    onClick={(e) => handleNavigation(e, path, id.toLowerCase())}
+                    onClick={(e) => {
+                      handleNavigation(e, path, id.toLowerCase());
+                      textEffect(e);
+                    }}
                     className={`nav-link ${navigation === id ? "active" : ""}`}
                     to={path}
                     data-nav={id.toLowerCase()}
